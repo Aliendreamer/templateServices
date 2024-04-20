@@ -1,0 +1,12 @@
+.dockerignore
+.eslintignore
+.eslintrc.js
+.git
+.gitattributes
+.gitignore
+.husky
+.vscode
+node_modules
+publish
+README.md
+

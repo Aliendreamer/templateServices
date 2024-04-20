@@ -1,0 +1,129 @@
+version: '3'
+services:
+  redis:
+    image: redis:7.2.4-alpine3.19
+    container_name: redis
+    environment:
+      REDIS_PASSWORD: credisadmin
+    ports:
+      - '6379:6379'
+    command: redis-server --save 60 1 --loglevel warning
+    volumes:
+      - cache:/data
+    networks:
+      - config
+    restart: always
+  redisInsight:
+    image: redis/redisinsight:latest
+    container_name: redisinsight
+    ports:
+      - '5540:5540'
+    networks:
+      - config
+    restart: always
+  mongo:
+    build:
+      context: ../
+      dockerfile: docker/mongo.Dockerfile
+    container_name: mongoDB
+    volumes:
+      - mongo-data-volume:/data/db
+      - mongo-data-config-volume:/data/configDB
+    ports:
+      - '27017:27017'
+    networks:
+      - config
+    restart: always
+  mongoexpress:
+    image: mongo-express:1.0.2-20-alpine3.19
+    container_name: mongoexpress
+    ports:
+      - '8081:8081'
+    depends_on:
+      - mongo
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: cadmin
+      ME_CONFIG_BASICAUTH_PASSWORD: cadmin
+    networks:
+      - config
+    restart: always
+  keycloak:
+      build:
+        context: ../
+        dockerfile: docker/auth.Dockerfile
+      container_name: keycloak
+      image: keycloak
+      environment:
+        DB_ADDR: postgres
+        KEYCLOAK_ADMIN: cadmin
+        KEYCLOAK_ADMIN_PASSWORD: cadmin
+        KC_HOSTNAME_STRICT: "false"
+        KC_HOSTNAME_STRICT_HTTPS: "false"
+        KC_HTTPS_ENABLED: "false"
+        KC_HTTP_ENABLED: "true"
+        KC_HTTPS_CLIENT_AUTH: none
+        KC_LOG: "console"
+        KC_LOG_CONSOLE_COLOR: "true"
+        KC_PROXY: "edge"
+        KC_HOSTNAME_STRICT_BACKCHANNEL: "false"
+      ports:
+        - "5001:8080"
+        - "5005:8080"
+      depends_on:
+        - postgres
+      networks:
+        - config
+      volumes:
+        - mc-keycloak-data-volume:/keycloak/standalone/data
+        - ../../docker/prod/keycloak/config/realm-export.json:/opt/jboss/keycloak/realm-export.json
+  custom-node:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    container_name: configService
+    volumes:
+      - ../client:/app/client
+      - ../server:/app/server
+      - ../node_modules:/app/node_modules
+      - ../logs:/app/logs
+      - ../webpack.config.js:/app/webpack.config.js
+    ports:
+      - '5000:5000'
+      - '9222:9222'
+      - '9229:9229'
+    depends_on:
+      - redis
+      - mongo
+    environment:
+      WAIT_BEFORE: 10
+      WAIT_HOSTS: mongoDB:27017, redis:6379,  keycloak:8080
+      REDIS_PORT: 6379
+      REACT_APP_REDIS_HOST: 172.28.224.1
+      MONGODB_URI: mongodb://cadmin:cadmin@mongodb:27017/configDB
+  networks:
+      - config
+  restart: always
+  postgres:
+      build:
+        context: ../
+        dockerfile: docker/postgres.Dockerfile
+      container_name: postgres
+      image: postgres
+      volumes:
+        - mc-keycloak-postgres-data-volume:/var/lib/postgresql/data
+      networks:
+        - config
+networks:
+  config:
+    driver: bridge
+volumes:
+  mongo-data-volume:
+    driver: local
+  mongo-data-config-volume:
+    driver: local
+  cache:
+    driver: local
+  mc-keycloak-data-volume:
+    driver: local
+  mc-keycloak-postgres-data-volume:
+    driver: local
