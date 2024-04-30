@@ -1,0 +1,40 @@
+support edit create delete per environment configurations
+refresh the redis cache on active change / publish application
+implement log rotation with cron job per day.
+delete logs that are more than 30 days old.
+refresh cache with the active configurations on application restart
+add possibility to have new keys on all environments of device type automatically adding it once adds it every where, but only per
+device type / probably with 2 roles editor and developer and only a developer will be able to do this
+find how to keep diff as property to be checked at one point as history between versions. in same version maybe keep only the last change?
+integrate poe editor api / keep in mind the load they can handle /
+- update keys
+-download keys and values
+-list projects
+
+-- add validations that there is only 1 active per combination device opco env
+-- add validation that you cant delete the active configuration
+
+
+https://app.swaggerhub.com/apis/POEditor/v_2/1.0.4#/Response poe editor  swagger
+https://github.com/lukascivil/json-difference this maybe useful instead of doing the same manually
+function diff(obj1, obj2) {
+    const result = {};
+    if (Object.is(obj1, obj2)) {
+        return undefined;
+    }
+    if (!obj2 || typeof obj2 !== 'object') {
+        return obj2;
+    }
+    Object.keys(obj1 || {}).concat(Object.keys(obj2 || {})).forEach(key => {
+        if(obj2[key] !== obj1[key] && !Object.is(obj1[key], obj2[key])) {
+            result[key] = obj2[key];
+        }
+        if(typeof obj2[key] === 'object' && typeof obj1[key] === 'object') {
+            const value = diff(obj1[key], obj2[key]);
+            if (value !== undefined) {
+                result[key] = value;
+            }
+        }
+    });
+    return result;
+}

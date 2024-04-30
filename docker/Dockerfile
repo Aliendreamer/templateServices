@@ -17,6 +17,7 @@ ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.12.0/wai
 COPY package.json /app
 COPY yarn.lock /app
 COPY . /app
+RUN mkdir dev
 COPY --chown=node:node . /app
 
 RUN find . -type d  -mindepth 1 -maxdepth 1 \( -path ./node_modules \) -prune -o -print0 |xargs -0 chown -R node:node

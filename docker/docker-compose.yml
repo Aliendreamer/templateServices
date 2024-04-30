@@ -1,10 +1,46 @@
-version: '3'
 services:
+  postgres:
+    build:
+      context: ../
+      dockerfile: docker/postgres.Dockerfile
+    container_name: postgres
+    image: postgres
+    volumes:
+      - mc-keycloak-postgres-data-volume:/var/lib/postgresql/data
+    networks:
+      - config
+  keycloak:
+    build:
+      context: ../
+      dockerfile: docker/keycloak.Dockerfile
+    container_name: keycloak
+    image: keycloak
+    environment:
+      DB_ADDR: postgres
+      KEYCLOAK_ADMIN: cadmin
+      KEYCLOAK_ADMIN_PASSWORD: cadmin
+      KC_HOSTNAME_STRICT: 'false'
+      KC_HOSTNAME_STRICT_HTTPS: 'false'
+      KC_HTTPS_ENABLED: 'false'
+      KC_HTTP_ENABLED: 'true'
+      KC_HTTPS_CLIENT_AUTH: none
+      KC_LOG: 'console'
+      KC_LOG_CONSOLE_COLOR: 'true'
+      KC_PROXY: 'edge'
+      KC_HOSTNAME_STRICT_BACKCHANNEL: 'false'
+    ports:
+      - '5001:8080'
+      - '5005:8080'
+    depends_on:
+      - postgres
+    networks:
+      - config
+    volumes:
+      - mc-keycloak-data-volume:/keycloak/standalone/data
+      - ./docker/realm-export.json:/opt/jboss/keycloak/realm-export.json
   redis:
     image: redis:7.2.4-alpine3.19
     container_name: redis
-    environment:
-      REDIS_PASSWORD: credisadmin
     ports:
       - '6379:6379'
     command: redis-server --save 60 1 --loglevel warning
@@ -47,35 +83,6 @@ services:
     networks:
       - config
     restart: always
-  keycloak:
-      build:
-        context: ../
-        dockerfile: docker/auth.Dockerfile
-      container_name: keycloak
-      image: keycloak
-      environment:
-        DB_ADDR: postgres
-        KEYCLOAK_ADMIN: cadmin
-        KEYCLOAK_ADMIN_PASSWORD: cadmin
-        KC_HOSTNAME_STRICT: "false"
-        KC_HOSTNAME_STRICT_HTTPS: "false"
-        KC_HTTPS_ENABLED: "false"
-        KC_HTTP_ENABLED: "true"
-        KC_HTTPS_CLIENT_AUTH: none
-        KC_LOG: "console"
-        KC_LOG_CONSOLE_COLOR: "true"
-        KC_PROXY: "edge"
-        KC_HOSTNAME_STRICT_BACKCHANNEL: "false"
-      ports:
-        - "5001:8080"
-        - "5005:8080"
-      depends_on:
-        - postgres
-      networks:
-        - config
-      volumes:
-        - mc-keycloak-data-volume:/keycloak/standalone/data
-        - ../../docker/prod/keycloak/config/realm-export.json:/opt/jboss/keycloak/realm-export.json
   custom-node:
     build:
       context: ../
@@ -96,23 +103,13 @@ services:
       - mongo
     environment:
       WAIT_BEFORE: 10
-      WAIT_HOSTS: mongoDB:27017, redis:6379,  keycloak:8080
-      REDIS_PORT: 6379
+      WAIT_HOSTS: mongoDB:27017, redis:6379, keycloak:8080
       REACT_APP_REDIS_HOST: 172.28.224.1
       MONGODB_URI: mongodb://cadmin:cadmin@mongodb:27017/configDB
-  networks:
+    networks:
       - config
-  restart: always
-  postgres:
-      build:
-        context: ../
-        dockerfile: docker/postgres.Dockerfile
-      container_name: postgres
-      image: postgres
-      volumes:
-        - mc-keycloak-postgres-data-volume:/var/lib/postgresql/data
-      networks:
-        - config
+    restart: always
+
 networks:
   config:
     driver: bridge
@@ -123,7 +120,7 @@ volumes:
     driver: local
   cache:
     driver: local
-  mc-keycloak-data-volume:
-    driver: local
   mc-keycloak-postgres-data-volume:
+    driver: local
+  mc-keycloak-data-volume:
     driver: local

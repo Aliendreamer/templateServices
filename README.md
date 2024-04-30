@@ -1,2 +1,3 @@
-# templateServices
-react hosted app on express server with rest or graphql api
+
+A new custom service to handle to config files for smart and android clients
+

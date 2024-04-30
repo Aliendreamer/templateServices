@@ -1,0 +1,4649 @@
+[
+	{
+		"_id": {
+			"$oid": "000000000000000000000001"
+		},
+		"version": 1,
+		"author": "Valentin Spasov",
+		"date": "2024-04-14T05:15:46.012Z",
+		"opco": "A1BG",
+		"deviceType": "smarttv",
+		"environment": "production",
+		"active": false,
+		"config": {
+			"content_config": {
+				"settings_menu": [
+					{
+						"title": "SETTINGS_LANGUAGE",
+						"info": "SETTINGS_LANGUAGE_HINT",
+						"id": "languages",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_CHANNEL_LINEUP",
+						"info": "SETTINGS_CHANNEL_LINEUP_HINT",
+						"id": "lineup",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_LIVE_CLOCK",
+						"info": "SETTINGS_LIVE_CLOCK_HINT",
+						"id": "clock",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_PARENTAL_CONTROL",
+						"info": "SETTINGS_PARENTAL_CONTROL_HINT",
+						"href": "parental-control",
+						"id": "parental-control",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_PIN",
+						"info": "SETTINGS_PIN_HINT",
+						"href": "pin",
+						"id": "pin",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_APPEARANCE_TITLE",
+						"info": "SETTINGS_APPEARANCE_HINT",
+						"id": "appearance",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_DEVICE_MANAGEMENT",
+						"info": "SETTINGS_DEVICE_MANAGEMENT_HINT",
+						"href": "device-management",
+						"id": "device-management",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "STARTUP_BEHAVIOR",
+						"info": "STARTUP_BEHAVIOR_HINT",
+						"href": "startupBehavior",
+						"id": "startupBehavior",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_SCREEN_RECORDINGS_STORAGE_TITLE",
+						"info": "SETTINGS_SCREEN_RECORDINGS_STORAGE_HINT",
+						"id": "npvr",
+						"type": "Npvr",
+						"target": "_blank"
+					},
+					{
+						"title": "SCREEN_SETTINGS_ABOUT",
+						"id": "about",
+						"type": "Internal"
+					},
+					{
+						"title": "SCREEN_SETTINGS_LOGOUT",
+						"info": "SCREEN_SETTINGS_LOGOUT_HINT",
+						"id": "logout",
+						"tooltip": "logout_action_tooltip",
+						"type": "Action"
+					}
+				],
+				"main_menu": [
+					{
+						"title": "MODULE_MAIN_MENU_HOME",
+						"id": "HOME"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_LIVE_TV",
+						"id": "LIVE_TV"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_EPG",
+						"id": "EPG"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_VIDEO_STORE",
+						"id": "VIDEOSTORE"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_MY_LIBRARY",
+						"id": "LIBRARY"
+					}
+				],
+				"app_config": {
+					"player_config": {
+						"hide_controls_after": 2.5,
+						"skip_back_interval": 10,
+						"skip_forward_interval": 30,
+						"binge_watching_threshold": 30,
+						"timeshift_duration": "",
+						"start_over_threshold": ""
+					},
+					"content_markers": {
+						"_DEFAULT": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NOW": {},
+						"CONTENT_MARKER_NOW_PLAYING": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_LIVE": {
+							"color": "#FAFAFA",
+							"background": "#6295AC",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NEXT": {
+							"color": "#121212",
+							"background": "#FAFAFA",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PAST": {},
+						"CONTENT_MARKER_RENTED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_RECORDED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PURCHASED": {},
+						"CONTENT_MARKER_NOT_SUBSCRIBED": {},
+						"CONTENT_MARKER_NEW": {},
+						"CONTENT_MARKER_FREE": {},
+						"CONTENT_MARKER_NEW_EPISODES": {}
+					},
+					"search_threshold": 3,
+					"player_settings": {
+						"skip_forward_interval": 60000,
+						"skip_back_interval": 30000,
+						"binge_watching_threshold": 30000,
+						"hide_controls_after": 5000,
+						"bookmark_threshold (sec)": null,
+						"bookmark_threshold": 95,
+						"startover_min_position_ms": 10000,
+						"bookmark_start_timeout": 180000,
+						"drm_protection": false,
+						"home_screen_player": {
+							"enabled": true,
+							"muted": false
+						},
+						"castlabs_settings": {
+							"pauseWhenInBackground": true,
+							"loop": false,
+							"enableHtmlCue": false,
+							"lowLatencyMode": false,
+							"suggestedPresentationDelay": 16,
+							"forceWaitForTracks": false,
+							"manifest": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"fuzzFactor": 0.5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"timeout": 10000
+								},
+								"availabilityWindowOverride": null,
+								"clockSyncUri": "",
+								"ignoreDrmInfo": false,
+								"xlinkFailGracefully": false,
+								"autoCorrectDrift": true
+							},
+							"abr": {
+								"enabled": true,
+								"defaultBandwidthEstimate": 2100000,
+								"switchInterval": 8,
+								"bandwidthUpgradeTarget": 0.85,
+								"bandwidthDowngradeTarget": 0.95,
+								"useSwitchIntervalForInitialSwitch": false,
+								"restrictions": {
+									"minWidth": 0,
+									"maxWidth": null,
+									"minHeight": 0,
+									"maxHeight": null,
+									"minPixels": 0,
+									"maxPixels": null,
+									"minBandwidth": 0,
+									"maxBandwidth": null
+								},
+								"initialRestrictions": {
+									"maxWidth": 1281,
+									"maxHeight": 721
+								}
+							},
+							"streaming": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"fuzzFactor": 0.5,
+									"timeout": 10000
+								},
+								"bufferingGoal": 12,
+								"rebufferingGoal": 8,
+								"bufferBehind": 20,
+								"ignoreTextStreamFailures": false,
+								"alwaysStreamText": false,
+								"relativeTextTimestamp": false,
+								"startAtSegmentBoundary": true,
+								"gapDetectionThreshold": 0.1,
+								"smallGapLimit": 0.5,
+								"jumpLargeGaps": true,
+								"durationBackoff": 1,
+								"maxSegmentToMediaOffset": 1,
+								"forceNativeTS": false,
+								"preferNativeHlsOnSafari": true,
+								"safeSeekOffset": 5,
+								"stallEnabled": true,
+								"stallThreshold": 3,
+								"stallSkip": 0.5,
+								"bufferLimitUpdateInterval": 0.5,
+								"overridePasp": false,
+								"enableLiveEdgeChasing": false,
+								"chasingRate": 1.15,
+								"startChasingAt": 5,
+								"stopChasingAt": 2,
+								"chaseJumpDistance": 10,
+								"patchEdgeWhenMixedContent": false,
+								"ignoreDrift": false,
+								"disableFragmentSupport": true,
+								"disableMergedFragments": true
+							},
+							"restrictions": {
+								"minWidth": 0,
+								"maxWidth": null,
+								"minHeight": 0,
+								"maxHeight": null,
+								"minPixels": 0,
+								"maxPixels": null,
+								"minBandwidth": 0,
+								"maxBandwidth": null
+							},
+							"tizen": {
+								"sideStreamText": false
+							},
+							"htmlcue": {
+								"stretchSmpteImage": false,
+								"enableResizeObserver": false
+							},
+							"ttml": {},
+							"textstyle": {
+								"fontFamily": "'Roboto', sans-serif",
+								"fontColor": "white",
+								"backgroundColor": "rgba(0, 0, 0, 0.75)"
+							}
+						},
+						"live_catchup_playback_threshold": 60,
+						"channel_switch_player_timeout": 400,
+						"household_track_list": "[]"
+					},
+					"epg_settings": {
+						"past_visibility": 518400000,
+						"future_visibility": 518400000,
+						"prime_time_dst": "GMT+2",
+						"prime_time": 68400000
+					},
+					"search_settings": {
+						"key_threshold": 2,
+						"trigger_timeout": 500
+					},
+					"audio_subtitles": {
+						"default_audio_track": "eng",
+						"default_subtitle_track": "bul",
+						"poeditor_language_mapping": {
+							"bul": "SETTINGS_BG",
+							"eng": "SETTINGS_EN",
+							"deu": "SETTINGS_DE",
+							"fra": "SETTINGS_FR",
+							"ita": "SETTINGS_IT",
+							"rus": "SETTINGS_RU",
+							"spa": "SETTINGS_ES",
+							"por": "SETTINGS_PT",
+							"zho": "SETTINGS_ZH_TW",
+							"ron": "SETTINGS_RO",
+							"srp": "SETTINGS_SR",
+							"nld": "SETTINGS_NL",
+							"tur": "SETTINGS_TR",
+							"hrv": "SETTINGS_HR",
+							"slv": "SETTINGS_SL",
+							"slk": "SETTINGS_SK",
+							"hun": "SETTINGS_HU",
+							"ces": "SETTINGS_CS",
+							"bos": "SETTINGS_BS",
+							"pol": "SETTINGS_PL",
+							"ara": "SETTINGS_AR",
+							"sqi": "SETTINGS_SQ",
+							"ger": "SETTINGS_DE",
+							"hye": "SETTINGS_HY",
+							"bg": "SETTINGS_BG",
+							"en": "SETTINGS_EN",
+							"de": "SETTINGS_DE",
+							"fr": "SETTINGS_FR",
+							"it": "SETTINGS_IT",
+							"ru": "SETTINGS_RU",
+							"es": "SETTINGS_ES",
+							"pt": "SETTINGS_PT",
+							"zh": "SETTINGS_ZH_TW",
+							"ro": "SETTINGS_RO",
+							"sr": "SETTINGS_SR",
+							"nl": "SETTINGS_NL",
+							"tr": "SETTINGS_TR",
+							"hr": "SETTINGS_HR",
+							"sl": "SETTINGS_SL",
+							"sk": "SETTINGS_SK",
+							"hu": "SETTINGS_HU",
+							"cs": "SETTINGS_CS",
+							"bs": "SETTINGS_BS",
+							"pl": "SETTINGS_PL",
+							"ar": "SETTINGS_AR",
+							"sq": "SETTINGS_SQ",
+							"hy": "SETTINGS_HY",
+							"ola": "SETTINGS_ORIGINAL",
+							"mt": "SETTINGS_MULTILINGUAL",
+							"mlt": "SETTINGS_MULTILINGUAL"
+						},
+						"available_audio_languages": {
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"hu": "hun",
+							"pl": "pol",
+							"hy": "hye",
+							"sr": "srp",
+							"hr": "hrv",
+							"cs": "ces",
+							"es": "spa",
+							"sk": "slk",
+							"tr": "tur",
+							"mlt": "mlt"
+						},
+						"available_subtitles_languages": {
+							"off": "none",
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"es": "spa",
+							"pt": "por",
+							"zh": "zho",
+							"ro": "ron",
+							"sr": "srp",
+							"nl": "nld",
+							"tr": "tur"
+						}
+					},
+					"miscellanious": {
+						"reminder_timer": 30,
+						"max_items_collection": 5,
+						"resume_threshold": 100,
+						"imagesettings": {
+							"thumbnail": {
+								"xsHeight": 200,
+								"height": 280,
+								"xlHeight": 808,
+								"width": 0
+							},
+							"background": {
+								"portrait": 780,
+								"landscape": 1080,
+								"width": 1920
+							},
+							"logo": {
+								"largeHeight": 216,
+								"largeWidth": 384,
+								"mediumHeight": 112,
+								"mediumWidth": 41,
+								"smallHeight": 29,
+								"smallWidth": 75
+							}
+						},
+						"reset_pass_qr_code": "https://media.a1.bg/a1xploretvgo/qr.png",
+						"gdpr_accepted": 1629362425341,
+						"radio_fallback_image": "https://smarttv-config.a1xploretv.bg/radioFallbackImage.png",
+						"is_series_recording_allowed": false,
+						"show_catchup_icon": true,
+						"vod_upsell_allowed": {
+							"Samsung TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"LG TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Hisense TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Philips TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"PC": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							}
+						},
+						"show_legacy_gdpr": true,
+						"event_not_available_timer": 30
+					},
+					"pin_settings": {
+						"allowed_wrong_attempts": 3,
+						"wrong_attempts_lock_duration": 30000,
+						"pin_session_expiry": null
+					},
+					"fti": {
+						"screens": [
+							{
+								"id": "0",
+								"name": "welcomeScreen",
+								"enabled": false,
+								"isNewVariant": false
+							},
+							{
+								"id": "1",
+								"name": "login",
+								"enabled": false
+							},
+							{
+								"id": "2",
+								"name": "languageSelection",
+								"enabled": false
+							},
+							{
+								"id": "3",
+								"name": "pinCode",
+								"enabled": false
+							},
+							{
+								"id": "4",
+								"name": "ageRating",
+								"enabled": false
+							},
+							{
+								"id": "5",
+								"name": "privacyPolicy",
+								"enabled": false
+							},
+							{
+								"id": "6",
+								"name": "region",
+								"enabled": false
+							},
+							{
+								"id": "7",
+								"name": "viewControl",
+								"enabled": false
+							},
+							{
+								"id": "8",
+								"name": "deviceManagement",
+								"enabled": false
+							},
+							{
+								"id": "9",
+								"name": "closingScreen",
+								"enabled": false
+							}
+						]
+					},
+					"settings_items": {
+						"language_elements": [
+							{
+								"id": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"title": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"info": "SETTINGS_LANGUAGE_UI_LANGUAGE_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							}
+						]
+					},
+					"uar": {
+						"logging_config": {
+							"endpoint": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/rest/events",
+							"batchBuffer": {
+								"timer": 60,
+								"maxSize": 100,
+								"maxRetries": 5
+							},
+							"retryBuffer": {
+								"timer": 300,
+								"maxSize": 100000,
+								"purgeSize": 0,
+								"requestSize": 500
+							},
+							"metrics": {
+								"timer": 900
+							}
+						}
+					},
+					"idp_auth": {
+						"settings": {
+							"activated": false,
+							"url": "https://tv.a1.bg/auth/realms/Xplore-TV/protocol/openid-connect",
+							"clientId": "xploretv",
+							"clientSecret": "CCrf4BraXewFinTpGiNzqzc2uGLf406r",
+							"clientScope": "openid",
+							"grantType": "urn:ietf:params:oauth:grant-type:device_code"
+						}
+					},
+					"languages": {
+						"en": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/en.json",
+							"image": "https://demo.3rdy.tv/cc-static-files/client-files/demo.3rdy.tv/ico-flag-united-states.png",
+							"default": true
+						},
+						"bg": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/bg.json",
+							"image": "bg",
+							"default": false
+						}
+					}
+				},
+				"layout_config": {
+					"title": "A1",
+					"tv_background_dark_base_primary": "#121212",
+					"tv_background_dark_base_secondary": "#1c1c1e",
+					"tv_background_dark_base_tertiary": "#2c2c2e",
+					"tv_background_light_primary": "#fafafa",
+					"tv_background_light_secondary": "#f2f2f2",
+					"tv_background_light_tertiary": "#fafafa",
+					"tv_stripe_item_shadow_a1_gray_light_default": "#12121233",
+					"tv_stripe_item_shadow_a1_gray_light_selected": "#12121240",
+					"tv_stripe_item_shadow_a1_gray_dark_default": "#fafafa38",
+					"tv_stripe_item_shadow_a1_gray_dark_selected": "#da291c52",
+					"tv_button_background_a1_cool_blue_dark_selected": "#6c9fb1",
+					"tv_button_background_a1_cool_blue_light_selected": "#6295ac",
+					"tv_button_background_a1_hot_red_dark_selected": "#da3326",
+					"tv_button_background_a1_hot_red_light_selected": "#da291c",
+					"tv_button_background_a1_gray_dark_primary": "#12121299",
+					"tv_button_background_a1_gray_dark_secondary": "#3c3c3e99",
+					"tv_button_background_a1_gray_light_primary": "#fafafa99",
+					"tv_button_background_a1_gray_light_secondary": "#e5e5e599",
+					"tv_button_shadow_a1_gray_light_selected": "#12121233",
+					"tv_button_shadow_a1_gray_dark_selected": "#da291c38",
+					"tv_fill_colors_a1_gray_dark_primary": "#6363665c",
+					"tv_fill_colors_a1_gray_dark_secondary": "#63636652",
+					"tv_fill_colors_a1_gray_dark_tertiary": "#6363663d",
+					"tv_fill_colors_a1_gray_dark_quaternary": "#6363662e",
+					"tv_fill_colors_a1_gray_light_primary": "#70707033",
+					"tv_fill_colors_a1_gray_light_secondary": "#7070702e",
+					"tv_fill_colors_a1_gray_light_tertiary": "#7070701f",
+					"tv_fill_colors_a1_gray_light_quaternary": "#70707014",
+					"tv_indicator_light": "#6666665c",
+					"tv_indicator_dark": "#2c2c2ea6",
+					"tv_label_colors_a1_hot_red_dark_primary": "#da3326",
+					"tv_label_colors_a1_hot_red_light_primary": "#da291c",
+					"tv_label_colors_a1_cool_blue_dark_primary": "#6c9fb1",
+					"tv_label_colors_a1_cool_blue_light_primary": "#6295ac",
+					"tv_label_colors_a1_gray_dark_primary": "#fafafa",
+					"tv_label_colors_a1_gray_dark_secondary": "#f4f4f599",
+					"tv_label_colors_a1_gray_dark_tertiary": "#f4f4f54d",
+					"tv_label_colors_a1_gray_dark_quaternary": "#f4f4f52e",
+					"tv_label_colors_a1_gray_light_primary": "#121212",
+					"tv_label_colors_a1_gray_light_secondary": "#33333399",
+					"tv_label_colors_a1_gray_light_tertiary": "#3333334d",
+					"tv_label_colors_a1_gray_light_quaternary": "#3333332e",
+					"tv_overlay_background_a1_gray_dark_no_blur_supported": "#121212f0",
+					"tv_overlay_background_a1_gray_light_no_blur_supported": "#fafafaf0",
+					"tv_overlay_background_a1_gray_dark": "#121212cc",
+					"tv_overlay_background_a1_gray_light": "#fafafacc",
+					"tv_functional_dark_activeadblock": "#ffcc00",
+					"tv_functional_light_activeadblock": "#ffcc00",
+					"black_color": "#000000",
+					"white_color": "#FFFFFF"
+				},
+				"api_config": {
+					"routes": {
+						"Auth": {
+							"graphql": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/graphql/4.0",
+							"Login": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Login",
+							"Logout": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Logout",
+							"CheckToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CheckToken",
+							"CloneToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CloneToken",
+							"GetToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/GetToken",
+							"SessionHB": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/hhSvc/SessionHB"
+						},
+						"DRM": {
+							"license_server_playready": "https://prls.a1xploretv.bg/PlayReady/rightsmanager.asmx",
+							"license_server_widevine": "https://wvps.a1xploretv.bg:8063/"
+						}
+					}
+				},
+				"version_metadata": {
+					"version_title": "disable idp",
+					"version_number": 85,
+					"active": true,
+					"created_at": 1711468254606
+				}
+			}
+		}
+	},
+	{
+		"_id": {
+			"$oid": "000000000000000000000002"
+		},
+		"version": 2,
+		"author": "Teodor Stefanov",
+		"date": "2024-04-03T05:11:09.073Z",
+		"opco": "A1BG",
+		"deviceType": "smarttv",
+		"environment": "production",
+		"active": true,
+		"config": {
+			"content_config": {
+				"settings_menu": [
+					{
+						"title": "SETTINGS_LANGUAGE",
+						"info": "SETTINGS_LANGUAGE_HINT",
+						"id": "languages",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_CHANNEL_LINEUP",
+						"info": "SETTINGS_CHANNEL_LINEUP_HINT",
+						"id": "lineup",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_LIVE_CLOCK",
+						"info": "SETTINGS_LIVE_CLOCK_HINT",
+						"id": "clock",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_PARENTAL_CONTROL",
+						"info": "SETTINGS_PARENTAL_CONTROL_HINT",
+						"href": "parental-control",
+						"id": "parental-control",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_PIN",
+						"info": "SETTINGS_PIN_HINT",
+						"href": "pin",
+						"id": "pin",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_APPEARANCE_TITLE",
+						"info": "SETTINGS_APPEARANCE_HINT",
+						"id": "appearance",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_DEVICE_MANAGEMENT",
+						"info": "SETTINGS_DEVICE_MANAGEMENT_HINT",
+						"href": "device-management",
+						"id": "device-management",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "STARTUP_BEHAVIOR",
+						"info": "STARTUP_BEHAVIOR_HINT",
+						"href": "startupBehavior",
+						"id": "startupBehavior",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_SCREEN_RECORDINGS_STORAGE_TITLE",
+						"info": "SETTINGS_SCREEN_RECORDINGS_STORAGE_HINT",
+						"id": "npvr",
+						"type": "Npvr",
+						"target": "_blank"
+					},
+					{
+						"title": "SCREEN_SETTINGS_ABOUT",
+						"id": "about",
+						"type": "Internal"
+					},
+					{
+						"title": "SCREEN_SETTINGS_LOGOUT",
+						"info": "SCREEN_SETTINGS_LOGOUT_HINT",
+						"id": "logout",
+						"tooltip": "logout_action_tooltip",
+						"type": "Action"
+					}
+				],
+				"main_menu": [
+					{
+						"title": "MODULE_MAIN_MENU_HOME",
+						"id": "HOME"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_LIVE_TV",
+						"id": "LIVE_TV"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_EPG",
+						"id": "EPG"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_VIDEO_STORE",
+						"id": "VIDEOSTORE"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_MY_LIBRARY",
+						"id": "LIBRARY"
+					}
+				],
+				"app_config": {
+					"player_config": {
+						"hide_controls_after": 2.5,
+						"skip_back_interval": 10,
+						"skip_forward_interval": 30,
+						"binge_watching_threshold": 30,
+						"timeshift_duration": "",
+						"start_over_threshold": ""
+					},
+					"content_markers": {
+						"_DEFAULT": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NOW": {},
+						"CONTENT_MARKER_NOW_PLAYING": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_LIVE": {
+							"color": "#FAFAFA",
+							"background": "#6295AC",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NEXT": {
+							"color": "#121212",
+							"background": "#FAFAFA",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PAST": {},
+						"CONTENT_MARKER_RENTED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_RECORDED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PURCHASED": {},
+						"CONTENT_MARKER_NOT_SUBSCRIBED": {},
+						"CONTENT_MARKER_NEW": {},
+						"CONTENT_MARKER_FREE": {},
+						"CONTENT_MARKER_NEW_EPISODES": {}
+					},
+					"player_settings": {
+						"skip_forward_interval": 60000,
+						"skip_back_interval": 30000,
+						"binge_watching_threshold": 30000,
+						"hide_controls_after": 5000,
+						"bookmark_threshold (sec)": null,
+						"bookmark_threshold": 95,
+						"startover_min_position_ms": 10000,
+						"bookmark_start_timeout": 180000,
+						"drm_protection": false,
+						"home_screen_player": {
+							"enabled": true,
+							"muted": false
+						},
+						"castlabs_settings": {
+							"pauseWhenInBackground": true,
+							"loop": false,
+							"enableHtmlCue": false,
+							"lowLatencyMode": false,
+							"suggestedPresentationDelay": 16,
+							"forceWaitForTracks": false,
+							"manifest": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"fuzzFactor": 0.5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"timeout": 10000
+								},
+								"availabilityWindowOverride": null,
+								"clockSyncUri": "",
+								"ignoreDrmInfo": false,
+								"xlinkFailGracefully": false,
+								"autoCorrectDrift": true
+							},
+							"abr": {
+								"enabled": true,
+								"defaultBandwidthEstimate": 2100000,
+								"switchInterval": 8,
+								"bandwidthUpgradeTarget": 0.85,
+								"bandwidthDowngradeTarget": 0.95,
+								"useSwitchIntervalForInitialSwitch": false,
+								"restrictions": {
+									"minWidth": 0,
+									"maxWidth": null,
+									"minHeight": 0,
+									"maxHeight": null,
+									"minPixels": 0,
+									"maxPixels": null,
+									"minBandwidth": 0,
+									"maxBandwidth": null
+								},
+								"initialRestrictions": {
+									"maxWidth": 1281,
+									"maxHeight": 721
+								}
+							},
+							"streaming": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"fuzzFactor": 0.5,
+									"timeout": 10000
+								},
+								"bufferingGoal": 12,
+								"rebufferingGoal": 8,
+								"bufferBehind": 20,
+								"ignoreTextStreamFailures": false,
+								"alwaysStreamText": false,
+								"relativeTextTimestamp": false,
+								"startAtSegmentBoundary": true,
+								"gapDetectionThreshold": 0.1,
+								"smallGapLimit": 0.5,
+								"jumpLargeGaps": true,
+								"durationBackoff": 1,
+								"maxSegmentToMediaOffset": 1,
+								"forceNativeTS": false,
+								"preferNativeHlsOnSafari": true,
+								"safeSeekOffset": 5,
+								"stallEnabled": true,
+								"stallThreshold": 3,
+								"stallSkip": 0.5,
+								"bufferLimitUpdateInterval": 0.5,
+								"overridePasp": false,
+								"enableLiveEdgeChasing": false,
+								"chasingRate": 1.15,
+								"startChasingAt": 5,
+								"stopChasingAt": 2,
+								"chaseJumpDistance": 10,
+								"patchEdgeWhenMixedContent": false,
+								"ignoreDrift": false,
+								"disableFragmentSupport": true,
+								"disableMergedFragments": true
+							},
+							"restrictions": {
+								"minWidth": 0,
+								"maxWidth": null,
+								"minHeight": 0,
+								"maxHeight": null,
+								"minPixels": 0,
+								"maxPixels": null,
+								"minBandwidth": 0,
+								"maxBandwidth": null
+							},
+							"tizen": {
+								"sideStreamText": false
+							},
+							"htmlcue": {
+								"stretchSmpteImage": false,
+								"enableResizeObserver": false
+							},
+							"ttml": {},
+							"textstyle": {
+								"fontFamily": "'Roboto', sans-serif",
+								"fontColor": "white",
+								"backgroundColor": "rgba(0, 0, 0, 0.75)"
+							}
+						},
+						"live_catchup_playback_threshold": 60,
+						"channel_switch_player_timeout": 400,
+						"household_track_list": "[]"
+					},
+					"epg_settings": {
+						"past_visibility": 518400000,
+						"future_visibility": 518400000,
+						"prime_time_dst": "GMT+2",
+						"prime_time": 68400000
+					},
+					"search_settings": {
+						"key_threshold": 2,
+						"trigger_timeout": 500
+					},
+					"audio_subtitles": {
+						"default_audio_track": "eng",
+						"default_subtitle_track": "bul",
+						"poeditor_language_mapping": {
+							"bul": "SETTINGS_BG",
+							"eng": "SETTINGS_EN",
+							"deu": "SETTINGS_DE",
+							"fra": "SETTINGS_FR",
+							"ita": "SETTINGS_IT",
+							"rus": "SETTINGS_RU",
+							"spa": "SETTINGS_ES",
+							"por": "SETTINGS_PT",
+							"zho": "SETTINGS_ZH_TW",
+							"ron": "SETTINGS_RO",
+							"srp": "SETTINGS_SR",
+							"nld": "SETTINGS_NL",
+							"tur": "SETTINGS_TR",
+							"hrv": "SETTINGS_HR",
+							"slv": "SETTINGS_SL",
+							"slk": "SETTINGS_SK",
+							"hun": "SETTINGS_HU",
+							"ces": "SETTINGS_CS",
+							"bos": "SETTINGS_BS",
+							"pol": "SETTINGS_PL",
+							"ara": "SETTINGS_AR",
+							"sqi": "SETTINGS_SQ",
+							"ger": "SETTINGS_DE",
+							"hye": "SETTINGS_HY",
+							"bg": "SETTINGS_BG",
+							"en": "SETTINGS_EN",
+							"de": "SETTINGS_DE",
+							"fr": "SETTINGS_FR",
+							"it": "SETTINGS_IT",
+							"ru": "SETTINGS_RU",
+							"es": "SETTINGS_ES",
+							"pt": "SETTINGS_PT",
+							"zh": "SETTINGS_ZH_TW",
+							"ro": "SETTINGS_RO",
+							"sr": "SETTINGS_SR",
+							"nl": "SETTINGS_NL",
+							"tr": "SETTINGS_TR",
+							"hr": "SETTINGS_HR",
+							"sl": "SETTINGS_SL",
+							"sk": "SETTINGS_SK",
+							"hu": "SETTINGS_HU",
+							"cs": "SETTINGS_CS",
+							"bs": "SETTINGS_BS",
+							"pl": "SETTINGS_PL",
+							"ar": "SETTINGS_AR",
+							"sq": "SETTINGS_SQ",
+							"hy": "SETTINGS_HY",
+							"ola": "SETTINGS_ORIGINAL",
+							"mt": "SETTINGS_MULTILINGUAL",
+							"mlt": "SETTINGS_MULTILINGUAL"
+						},
+						"available_audio_languages": {
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"hu": "hun",
+							"pl": "pol",
+							"hy": "hye",
+							"sr": "srp",
+							"hr": "hrv",
+							"cs": "ces",
+							"es": "spa",
+							"sk": "slk",
+							"tr": "tur",
+							"mlt": "mlt"
+						},
+						"available_subtitles_languages": {
+							"off": "none",
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"es": "spa",
+							"pt": "por",
+							"zh": "zho",
+							"ro": "ron",
+							"sr": "srp",
+							"nl": "nld",
+							"tr": "tur"
+						}
+					},
+					"miscellanious": {
+						"reminder_timer": 30,
+						"max_items_collection": 5,
+						"resume_threshold": 100,
+						"imagesettings": {
+							"thumbnail": {
+								"xsHeight": 200,
+								"height": 280,
+								"xlHeight": 808,
+								"width": 0
+							},
+							"background": {
+								"portrait": 780,
+								"landscape": 1080,
+								"width": 1920
+							},
+							"logo": {
+								"largeHeight": 216,
+								"largeWidth": 384,
+								"mediumHeight": 112,
+								"mediumWidth": 41,
+								"smallHeight": 29,
+								"smallWidth": 75
+							}
+						},
+						"reset_pass_qr_code": "https://media.a1.bg/a1xploretvgo/qr.png",
+						"gdpr_accepted": 1629362425341,
+						"radio_fallback_image": "https://smarttv-config.a1xploretv.bg/radioFallbackImage.png",
+						"is_series_recording_allowed": false,
+						"show_catchup_icon": true,
+						"vod_upsell_allowed": {
+							"Samsung TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"LG TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Hisense TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Philips TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"PC": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							}
+						},
+						"show_legacy_gdpr": true,
+						"event_not_available_timer": 30
+					},
+					"pin_settings": {
+						"allowed_wrong_attempts": 3,
+						"wrong_attempts_lock_duration": 30000,
+						"pin_session_expiry": null
+					},
+					"fti": {
+						"screens": [
+							{
+								"id": "0",
+								"name": "welcomeScreen",
+								"enabled": false,
+								"isNewVariant": false
+							},
+							{
+								"id": "1",
+								"name": "login",
+								"enabled": false
+							},
+							{
+								"id": "2",
+								"name": "languageSelection",
+								"enabled": false
+							},
+							{
+								"id": "3",
+								"name": "pinCode",
+								"enabled": false
+							},
+							{
+								"id": "4",
+								"name": "ageRating",
+								"enabled": false
+							},
+							{
+								"id": "5",
+								"name": "privacyPolicy",
+								"enabled": false
+							},
+							{
+								"id": "6",
+								"name": "region",
+								"enabled": false
+							},
+							{
+								"id": "7",
+								"name": "viewControl",
+								"enabled": false
+							},
+							{
+								"id": "8",
+								"name": "deviceManagement",
+								"enabled": false
+							},
+							{
+								"id": "9",
+								"name": "closingScreen",
+								"enabled": false
+							}
+						]
+					},
+					"settings_items": {
+						"language_elements": [
+							{
+								"id": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"title": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"info": "SETTINGS_LANGUAGE_UI_LANGUAGE_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							}
+						]
+					},
+					"uar": {
+						"logging_config": {
+							"endpoint": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/rest/events",
+							"batchBuffer": {
+								"timer": 60,
+								"maxSize": 100,
+								"maxRetries": 5
+							},
+							"retryBuffer": {
+								"timer": 300,
+								"maxSize": 100000,
+								"purgeSize": 0,
+								"requestSize": 500
+							},
+							"metrics": {
+								"timer": 900
+							}
+						}
+					},
+					"idp_auth": {
+						"settings": {
+							"activated": false,
+							"url": "https://tv.a1.bg/auth/realms/Xplore-TV/protocol/openid-connect",
+							"clientId": "xploretv",
+							"clientSecret": "CCrf4BraXewFinTpGiNzqzc2uGLf406r",
+							"clientScope": "openid",
+							"grantType": "urn:ietf:params:oauth:grant-type:device_code"
+						}
+					},
+					"languages": {
+						"en": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/en.json",
+							"image": "https://demo.3rdy.tv/cc-static-files/client-files/demo.3rdy.tv/ico-flag-united-states.png",
+							"default": true
+						},
+						"bg": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/bg.json",
+							"image": "bg",
+							"default": false
+						}
+					}
+				},
+				"layout_config": {
+					"title": "A1",
+					"tv_background_dark_base_primary": "#121212",
+					"tv_background_dark_base_secondary": "#1c1c1e",
+					"tv_background_dark_base_tertiary": "#2c2c2e",
+					"tv_background_light_primary": "#fafafa",
+					"tv_background_light_secondary": "#f2f2f2",
+					"tv_background_light_tertiary": "#fafafa",
+					"tv_stripe_item_shadow_a1_gray_light_default": "#12121233",
+					"tv_stripe_item_shadow_a1_gray_light_selected": "#12121240",
+					"tv_stripe_item_shadow_a1_gray_dark_default": "#fafafa38",
+					"tv_stripe_item_shadow_a1_gray_dark_selected": "#da291c52",
+					"tv_button_background_a1_cool_blue_dark_selected": "#6c9fb1",
+					"tv_button_background_a1_cool_blue_light_selected": "#6295ac",
+					"tv_button_background_a1_hot_red_dark_selected": "#da3326",
+					"tv_button_background_a1_hot_red_light_selected": "#da291c",
+					"tv_button_background_a1_gray_dark_primary": "#12121299",
+					"tv_button_background_a1_gray_dark_secondary": "#3c3c3e99",
+					"tv_button_background_a1_gray_light_primary": "#fafafa99",
+					"tv_button_background_a1_gray_light_secondary": "#e5e5e599",
+					"tv_button_shadow_a1_gray_light_selected": "#12121233",
+					"tv_button_shadow_a1_gray_dark_selected": "#da291c38",
+					"tv_fill_colors_a1_gray_dark_primary": "#6363665c",
+					"tv_fill_colors_a1_gray_dark_secondary": "#63636652",
+					"tv_fill_colors_a1_gray_dark_tertiary": "#6363663d",
+					"tv_fill_colors_a1_gray_dark_quaternary": "#6363662e",
+					"tv_fill_colors_a1_gray_light_primary": "#70707033",
+					"tv_fill_colors_a1_gray_light_secondary": "#7070702e",
+					"tv_fill_colors_a1_gray_light_tertiary": "#7070701f",
+					"tv_fill_colors_a1_gray_light_quaternary": "#70707014",
+					"tv_indicator_light": "#6666665c",
+					"tv_indicator_dark": "#2c2c2ea6",
+					"tv_label_colors_a1_hot_red_dark_primary": "#da3326",
+					"tv_label_colors_a1_hot_red_light_primary": "#da291c",
+					"tv_label_colors_a1_cool_blue_dark_primary": "#6c9fb1",
+					"tv_label_colors_a1_cool_blue_light_primary": "#6295ac",
+					"tv_label_colors_a1_gray_dark_primary": "#fafafa",
+					"tv_label_colors_a1_gray_dark_secondary": "#f4f4f599",
+					"tv_label_colors_a1_gray_dark_tertiary": "#f4f4f54d",
+					"tv_label_colors_a1_gray_dark_quaternary": "#f4f4f52e",
+					"tv_label_colors_a1_gray_light_primary": "#121212",
+					"tv_label_colors_a1_gray_light_secondary": "#33333399",
+					"tv_label_colors_a1_gray_light_tertiary": "#3333334d",
+					"tv_label_colors_a1_gray_light_quaternary": "#3333332e",
+					"tv_overlay_background_a1_gray_dark_no_blur_supported": "#121212f0",
+					"tv_overlay_background_a1_gray_light_no_blur_supported": "#fafafaf0",
+					"tv_overlay_background_a1_gray_dark": "#121212cc",
+					"tv_overlay_background_a1_gray_light": "#fafafacc",
+					"tv_functional_dark_activeadblock": "#ffcc00",
+					"tv_functional_light_activeadblock": "#ffcc00",
+					"black_color": "#000000",
+					"white_color": "#FFFFFF"
+				},
+				"api_config": {
+					"routes": {
+						"Auth": {
+							"graphql": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/graphql/4.0",
+							"Login": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Login",
+							"Logout": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Logout",
+							"CheckToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CheckToken",
+							"CloneToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CloneToken",
+							"GetToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/GetToken",
+							"SessionHB": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/hhSvc/SessionHB"
+						},
+						"DRM": {
+							"license_server_playready": "https://prls.a1xploretv.bg/PlayReady/rightsmanager.asmx",
+							"license_server_widevine": "https://wvps.a1xploretv.bg:8063/"
+						}
+					}
+				},
+				"version_metadata": {
+					"version_title": "disable idp",
+					"version_number": 85,
+					"active": true,
+					"created_at": 1711468254606
+				}
+			}
+		}
+	},
+	{
+		"_id": {
+			"$oid": "000000000000000000000012"
+		},
+		"version": 55,
+		"author": "Teodor Stefanov",
+		"date": "2024-04-03T05:11:09.073Z",
+		"opco": "A1BG",
+		"deviceType": "smarttv",
+		"environment": "integration",
+		"active": true,
+		"config": {
+			"content_config": {
+				"settings_menu": [
+					{
+						"title": "SETTINGS_LANGUAGE",
+						"info": "SETTINGS_LANGUAGE_HINT",
+						"id": "languages",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_CHANNEL_LINEUP",
+						"info": "SETTINGS_CHANNEL_LINEUP_HINT",
+						"id": "lineup",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_LIVE_CLOCK",
+						"info": "SETTINGS_LIVE_CLOCK_HINT",
+						"id": "clock",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_PARENTAL_CONTROL",
+						"info": "SETTINGS_PARENTAL_CONTROL_HINT",
+						"href": "parental-control",
+						"id": "parental-control",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_PIN",
+						"info": "SETTINGS_PIN_HINT",
+						"href": "pin",
+						"id": "pin",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_APPEARANCE_TITLE",
+						"info": "SETTINGS_APPEARANCE_HINT",
+						"id": "appearance",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_DEVICE_MANAGEMENT",
+						"info": "SETTINGS_DEVICE_MANAGEMENT_HINT",
+						"href": "device-management",
+						"id": "device-management",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "STARTUP_BEHAVIOR",
+						"info": "STARTUP_BEHAVIOR_HINT",
+						"href": "startupBehavior",
+						"id": "startupBehavior",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_SCREEN_RECORDINGS_STORAGE_TITLE",
+						"info": "SETTINGS_SCREEN_RECORDINGS_STORAGE_HINT",
+						"id": "npvr",
+						"type": "Npvr",
+						"target": "_blank"
+					},
+					{
+						"title": "SCREEN_SETTINGS_ABOUT",
+						"id": "about",
+						"type": "Internal"
+					},
+					{
+						"title": "SCREEN_SETTINGS_LOGOUT",
+						"info": "SCREEN_SETTINGS_LOGOUT_HINT",
+						"id": "logout",
+						"tooltip": "logout_action_tooltip",
+						"type": "Action"
+					}
+				],
+				"main_menu": [
+					{
+						"title": "MODULE_MAIN_MENU_HOME",
+						"id": "HOME"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_LIVE_TV",
+						"id": "LIVE_TV"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_EPG",
+						"id": "EPG"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_VIDEO_STORE",
+						"id": "VIDEOSTORE"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_MY_LIBRARY",
+						"id": "LIBRARY"
+					}
+				],
+				"app_config": {
+					"player_config": {
+						"hide_controls_after": 2.5,
+						"skip_back_interval": 10,
+						"skip_forward_interval": 30,
+						"binge_watching_threshold": 30,
+						"timeshift_duration": "",
+						"start_over_threshold": ""
+					},
+					"content_markers": {
+						"_DEFAULT": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NOW": {},
+						"CONTENT_MARKER_NOW_PLAYING": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_LIVE": {
+							"color": "#FAFAFA",
+							"background": "#6295AC",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NEXT": {
+							"color": "#121212",
+							"background": "#FAFAFA",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PAST": {},
+						"CONTENT_MARKER_RENTED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_RECORDED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PURCHASED": {},
+						"CONTENT_MARKER_NOT_SUBSCRIBED": {},
+						"CONTENT_MARKER_NEW": {},
+						"CONTENT_MARKER_FREE": {},
+						"CONTENT_MARKER_NEW_EPISODES": {}
+					},
+					"search_threshold": 3,
+					"player_settings": {
+						"skip_forward_interval": 60000,
+						"skip_back_interval": 30000,
+						"binge_watching_threshold": 30000,
+						"hide_controls_after": 5000,
+						"bookmark_threshold (sec)": null,
+						"bookmark_threshold": 95,
+						"startover_min_position_ms": 10000,
+						"bookmark_start_timeout": 180000,
+						"drm_protection": false,
+						"home_screen_player": {
+							"enabled": true,
+							"muted": false
+						},
+						"castlabs_settings": {
+							"pauseWhenInBackground": true,
+							"loop": false,
+							"enableHtmlCue": false,
+							"lowLatencyMode": false,
+							"suggestedPresentationDelay": 16,
+							"forceWaitForTracks": false,
+							"manifest": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"fuzzFactor": 0.5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"timeout": 10000
+								},
+								"availabilityWindowOverride": null,
+								"clockSyncUri": "",
+								"ignoreDrmInfo": false,
+								"xlinkFailGracefully": false,
+								"autoCorrectDrift": true
+							},
+							"abr": {
+								"enabled": true,
+								"defaultBandwidthEstimate": 2100000,
+								"switchInterval": 8,
+								"bandwidthUpgradeTarget": 0.85,
+								"bandwidthDowngradeTarget": 0.95,
+								"useSwitchIntervalForInitialSwitch": false,
+								"restrictions": {
+									"minWidth": 0,
+									"maxWidth": null,
+									"minHeight": 0,
+									"maxHeight": null,
+									"minPixels": 0,
+									"maxPixels": null,
+									"minBandwidth": 0,
+									"maxBandwidth": null
+								},
+								"initialRestrictions": {
+									"maxWidth": 1281,
+									"maxHeight": 721
+								}
+							},
+							"streaming": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"fuzzFactor": 0.5,
+									"timeout": 10000
+								},
+								"bufferingGoal": 12,
+								"rebufferingGoal": 8,
+								"bufferBehind": 20,
+								"ignoreTextStreamFailures": false,
+								"alwaysStreamText": false,
+								"relativeTextTimestamp": false,
+								"startAtSegmentBoundary": true,
+								"gapDetectionThreshold": 0.1,
+								"smallGapLimit": 0.5,
+								"jumpLargeGaps": true,
+								"durationBackoff": 1,
+								"maxSegmentToMediaOffset": 1,
+								"forceNativeTS": false,
+								"preferNativeHlsOnSafari": true,
+								"safeSeekOffset": 5,
+								"stallEnabled": true,
+								"stallThreshold": 3,
+								"stallSkip": 0.5,
+								"bufferLimitUpdateInterval": 0.5,
+								"overridePasp": false,
+								"enableLiveEdgeChasing": false,
+								"chasingRate": 1.15,
+								"startChasingAt": 5,
+								"stopChasingAt": 2,
+								"chaseJumpDistance": 10,
+								"patchEdgeWhenMixedContent": false,
+								"ignoreDrift": false,
+								"disableFragmentSupport": true,
+								"disableMergedFragments": true
+							},
+							"restrictions": {
+								"minWidth": 0,
+								"maxWidth": null,
+								"minHeight": 0,
+								"maxHeight": null,
+								"minPixels": 0,
+								"maxPixels": null,
+								"minBandwidth": 0,
+								"maxBandwidth": null
+							},
+							"tizen": {
+								"sideStreamText": false
+							},
+							"htmlcue": {
+								"stretchSmpteImage": false,
+								"enableResizeObserver": false
+							},
+							"ttml": {},
+							"textstyle": {
+								"fontFamily": "'Roboto', sans-serif",
+								"fontColor": "white",
+								"backgroundColor": "rgba(0, 0, 0, 0.75)"
+							}
+						},
+						"live_catchup_playback_threshold": 60,
+						"channel_switch_player_timeout": 400,
+						"household_track_list": "[]"
+					},
+					"epg_settings": {
+						"past_visibility": 518400000,
+						"future_visibility": 518400000,
+						"prime_time_dst": "GMT+2",
+						"prime_time": 68400000
+					},
+					"search_settings": {
+						"key_threshold": 2,
+						"trigger_timeout": 500
+					},
+					"audio_subtitles": {
+						"default_audio_track": "eng",
+						"default_subtitle_track": "bul",
+						"poeditor_language_mapping": {
+							"bul": "SETTINGS_BG",
+							"eng": "SETTINGS_EN",
+							"deu": "SETTINGS_DE",
+							"fra": "SETTINGS_FR",
+							"ita": "SETTINGS_IT",
+							"rus": "SETTINGS_RU",
+							"spa": "SETTINGS_ES",
+							"por": "SETTINGS_PT",
+							"zho": "SETTINGS_ZH_TW",
+							"ron": "SETTINGS_RO",
+							"srp": "SETTINGS_SR",
+							"nld": "SETTINGS_NL",
+							"tur": "SETTINGS_TR",
+							"hrv": "SETTINGS_HR",
+							"slv": "SETTINGS_SL",
+							"slk": "SETTINGS_SK",
+							"hun": "SETTINGS_HU",
+							"ces": "SETTINGS_CS",
+							"bos": "SETTINGS_BS",
+							"pol": "SETTINGS_PL",
+							"ara": "SETTINGS_AR",
+							"sqi": "SETTINGS_SQ",
+							"ger": "SETTINGS_DE",
+							"hye": "SETTINGS_HY",
+							"bg": "SETTINGS_BG",
+							"en": "SETTINGS_EN",
+							"de": "SETTINGS_DE",
+							"fr": "SETTINGS_FR",
+							"it": "SETTINGS_IT",
+							"ru": "SETTINGS_RU",
+							"es": "SETTINGS_ES",
+							"pt": "SETTINGS_PT",
+							"zh": "SETTINGS_ZH_TW",
+							"ro": "SETTINGS_RO",
+							"sr": "SETTINGS_SR",
+							"nl": "SETTINGS_NL",
+							"tr": "SETTINGS_TR",
+							"hr": "SETTINGS_HR",
+							"sl": "SETTINGS_SL",
+							"sk": "SETTINGS_SK",
+							"hu": "SETTINGS_HU",
+							"cs": "SETTINGS_CS",
+							"bs": "SETTINGS_BS",
+							"pl": "SETTINGS_PL",
+							"ar": "SETTINGS_AR",
+							"sq": "SETTINGS_SQ",
+							"hy": "SETTINGS_HY",
+							"ola": "SETTINGS_ORIGINAL",
+							"mt": "SETTINGS_MULTILINGUAL",
+							"mlt": "SETTINGS_MULTILINGUAL"
+						},
+						"available_audio_languages": {
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"hu": "hun",
+							"pl": "pol",
+							"hy": "hye",
+							"sr": "srp",
+							"hr": "hrv",
+							"cs": "ces",
+							"es": "spa",
+							"sk": "slk",
+							"tr": "tur",
+							"mlt": "mlt"
+						},
+						"available_subtitles_languages": {
+							"off": "none",
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"es": "spa",
+							"pt": "por",
+							"zh": "zho",
+							"ro": "ron",
+							"sr": "srp",
+							"nl": "nld",
+							"tr": "tur"
+						}
+					},
+					"miscellanious": {
+						"reminder_timer": 30,
+						"max_items_collection": 5,
+						"resume_threshold": 100,
+						"imagesettings": {
+							"thumbnail": {
+								"xsHeight": 200,
+								"height": 280,
+								"xlHeight": 808,
+								"width": 0
+							},
+							"background": {
+								"portrait": 780,
+								"landscape": 1080,
+								"width": 1920
+							},
+							"logo": {
+								"largeHeight": 216,
+								"largeWidth": 384,
+								"mediumHeight": 112,
+								"mediumWidth": 41,
+								"smallHeight": 29,
+								"smallWidth": 75
+							}
+						},
+						"reset_pass_qr_code": "https://media.a1.bg/a1xploretvgo/qr.png",
+						"gdpr_accepted": 1629362425341,
+						"radio_fallback_image": "https://smarttv-config.a1xploretv.bg/radioFallbackImage.png",
+						"is_series_recording_allowed": false,
+						"show_catchup_icon": true,
+						"vod_upsell_allowed": {
+							"Samsung TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"LG TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Hisense TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Philips TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"PC": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							}
+						},
+						"show_legacy_gdpr": true,
+						"event_not_available_timer": 30
+					},
+					"pin_settings": {
+						"allowed_wrong_attempts": 3,
+						"wrong_attempts_lock_duration": 30000,
+						"pin_session_expiry": null
+					},
+					"fti": {
+						"screens": [
+							{
+								"id": "0",
+								"name": "welcomeScreen",
+								"enabled": false,
+								"isNewVariant": false
+							},
+							{
+								"id": "1",
+								"name": "login",
+								"enabled": false
+							},
+							{
+								"id": "2",
+								"name": "languageSelection",
+								"enabled": false
+							},
+							{
+								"id": "3",
+								"name": "pinCode",
+								"enabled": false
+							},
+							{
+								"id": "4",
+								"name": "ageRating",
+								"enabled": false
+							},
+							{
+								"id": "5",
+								"name": "privacyPolicy",
+								"enabled": false
+							},
+							{
+								"id": "6",
+								"name": "region",
+								"enabled": false
+							},
+							{
+								"id": "7",
+								"name": "viewControl",
+								"enabled": false
+							},
+							{
+								"id": "8",
+								"name": "deviceManagement",
+								"enabled": false
+							},
+							{
+								"id": "9",
+								"name": "closingScreen",
+								"enabled": false
+							}
+						]
+					},
+					"settings_items": {
+						"language_elements": [
+							{
+								"id": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"title": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"info": "SETTINGS_LANGUAGE_UI_LANGUAGE_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							}
+						]
+					},
+					"uar": {
+						"logging_config": {
+							"endpoint": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/rest/events",
+							"batchBuffer": {
+								"timer": 60,
+								"maxSize": 100,
+								"maxRetries": 5
+							},
+							"retryBuffer": {
+								"timer": 300,
+								"maxSize": 100000,
+								"purgeSize": 0,
+								"requestSize": 500
+							},
+							"metrics": {
+								"timer": 900
+							}
+						}
+					},
+					"idp_auth": {
+						"settings": {
+							"activated": false,
+							"url": "https://tv.a1.bg/auth/realms/Xplore-TV/protocol/openid-connect",
+							"clientId": "xploretv",
+							"clientSecret": "CCrf4BraXewFinTpGiNzqzc2uGLf406r",
+							"clientScope": "openid",
+							"grantType": "urn:ietf:params:oauth:grant-type:device_code"
+						}
+					},
+					"languages": {
+						"en": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/en.json",
+							"image": "https://demo.3rdy.tv/cc-static-files/client-files/demo.3rdy.tv/ico-flag-united-states.png",
+							"default": true
+						},
+						"bg": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/bg.json",
+							"image": "bg",
+							"default": false
+						}
+					}
+				},
+				"layout_config": {
+					"title": "A1",
+					"tv_background_dark_base_primary": "#121212",
+					"tv_background_dark_base_secondary": "#1c1c1e",
+					"tv_background_dark_base_tertiary": "#2c2c2e",
+					"tv_background_light_primary": "#fafafa",
+					"tv_background_light_secondary": "#f2f2f2",
+					"tv_background_light_tertiary": "#fafafa",
+					"tv_stripe_item_shadow_a1_gray_light_default": "#12121233",
+					"tv_stripe_item_shadow_a1_gray_light_selected": "#12121240",
+					"tv_stripe_item_shadow_a1_gray_dark_default": "#fafafa38",
+					"tv_stripe_item_shadow_a1_gray_dark_selected": "#da291c52",
+					"tv_button_background_a1_cool_blue_dark_selected": "#6c9fb1",
+					"tv_button_background_a1_cool_blue_light_selected": "#6295ac",
+					"tv_button_background_a1_hot_red_dark_selected": "#da3326",
+					"tv_button_background_a1_hot_red_light_selected": "#da291c",
+					"tv_button_background_a1_gray_dark_primary": "#12121299",
+					"tv_button_background_a1_gray_dark_secondary": "#3c3c3e99",
+					"tv_button_background_a1_gray_light_primary": "#fafafa99",
+					"tv_button_background_a1_gray_light_secondary": "#e5e5e599",
+					"tv_button_shadow_a1_gray_light_selected": "#12121233",
+					"tv_button_shadow_a1_gray_dark_selected": "#da291c38",
+					"tv_fill_colors_a1_gray_dark_primary": "#6363665c",
+					"tv_fill_colors_a1_gray_dark_secondary": "#63636652",
+					"tv_fill_colors_a1_gray_dark_tertiary": "#6363663d",
+					"tv_fill_colors_a1_gray_dark_quaternary": "#6363662e",
+					"tv_fill_colors_a1_gray_light_primary": "#70707033",
+					"tv_fill_colors_a1_gray_light_secondary": "#7070702e",
+					"tv_fill_colors_a1_gray_light_tertiary": "#7070701f",
+					"tv_fill_colors_a1_gray_light_quaternary": "#70707014",
+					"tv_indicator_light": "#6666665c",
+					"tv_indicator_dark": "#2c2c2ea6",
+					"tv_label_colors_a1_hot_red_dark_primary": "#da3326",
+					"tv_label_colors_a1_hot_red_light_primary": "#da291c",
+					"tv_label_colors_a1_cool_blue_dark_primary": "#6c9fb1",
+					"tv_label_colors_a1_cool_blue_light_primary": "#6295ac",
+					"tv_label_colors_a1_gray_dark_primary": "#fafafa",
+					"tv_label_colors_a1_gray_dark_secondary": "#f4f4f599",
+					"tv_label_colors_a1_gray_dark_tertiary": "#f4f4f54d",
+					"tv_label_colors_a1_gray_dark_quaternary": "#f4f4f52e",
+					"tv_label_colors_a1_gray_light_primary": "#121212",
+					"tv_label_colors_a1_gray_light_secondary": "#33333399",
+					"tv_label_colors_a1_gray_light_tertiary": "#3333334d",
+					"tv_label_colors_a1_gray_light_quaternary": "#3333332e",
+					"tv_overlay_background_a1_gray_dark_no_blur_supported": "#121212f0",
+					"tv_overlay_background_a1_gray_light_no_blur_supported": "#fafafaf0",
+					"tv_overlay_background_a1_gray_dark": "#121212cc",
+					"tv_overlay_background_a1_gray_light": "#fafafacc",
+					"tv_functional_dark_activeadblock": "#ffcc00",
+					"tv_functional_light_activeadblock": "#ffcc00",
+					"black_color": "#000000",
+					"white_color": "#FFFFFF"
+				},
+				"api_config": {
+					"routes": {
+						"Auth": {
+							"graphql": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/graphql/4.0",
+							"Login": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Login",
+							"Logout": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Logout",
+							"CheckToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CheckToken",
+							"CloneToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CloneToken",
+							"GetToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/GetToken",
+							"SessionHB": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/hhSvc/SessionHB"
+						},
+						"DRM": {
+							"license_server_playready": "https://prls.a1xploretv.bg/PlayReady/rightsmanager.asmx",
+							"license_server_widevine": "https://wvps.a1xploretv.bg:8063/"
+						}
+					}
+				},
+				"version_metadata": {
+					"version_title": "disable idp",
+					"version_number": 85,
+					"active": true,
+					"created_at": 1711468254606
+				}
+			}
+		}
+	},
+	{
+		"_id": {
+			"$oid": "000000000000000000000022"
+		},
+		"version": 55,
+		"author": "Teodor Stefanov",
+		"date": "2024-04-03T05:11:09.073Z",
+		"opco": "A1BG",
+		"deviceType": "smarttv",
+		"environment": "development",
+		"active": true,
+		"config": {
+			"content_config": {
+				"settings_menu": [
+					{
+						"title": "SETTINGS_LANGUAGE",
+						"info": "SETTINGS_LANGUAGE_HINT",
+						"id": "languages",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_CHANNEL_LINEUP",
+						"info": "SETTINGS_CHANNEL_LINEUP_HINT",
+						"id": "lineup",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_LIVE_CLOCK",
+						"info": "SETTINGS_LIVE_CLOCK_HINT",
+						"id": "clock",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_PARENTAL_CONTROL",
+						"info": "SETTINGS_PARENTAL_CONTROL_HINT",
+						"href": "parental-control",
+						"id": "parental-control",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_PIN",
+						"info": "SETTINGS_PIN_HINT",
+						"href": "pin",
+						"id": "pin",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_APPEARANCE_TITLE",
+						"info": "SETTINGS_APPEARANCE_HINT",
+						"id": "appearance",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_DEVICE_MANAGEMENT",
+						"info": "SETTINGS_DEVICE_MANAGEMENT_HINT",
+						"href": "device-management",
+						"id": "device-management",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "STARTUP_BEHAVIOR",
+						"info": "STARTUP_BEHAVIOR_HINT",
+						"href": "startupBehavior",
+						"id": "startupBehavior",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_SCREEN_RECORDINGS_STORAGE_TITLE",
+						"info": "SETTINGS_SCREEN_RECORDINGS_STORAGE_HINT",
+						"id": "npvr",
+						"type": "Npvr",
+						"target": "_blank"
+					},
+					{
+						"title": "SCREEN_SETTINGS_ABOUT",
+						"id": "about",
+						"type": "Internal"
+					},
+					{
+						"title": "SCREEN_SETTINGS_LOGOUT",
+						"info": "SCREEN_SETTINGS_LOGOUT_HINT",
+						"id": "logout",
+						"tooltip": "logout_action_tooltip",
+						"type": "Action"
+					}
+				],
+				"main_menu": [
+					{
+						"title": "MODULE_MAIN_MENU_HOME",
+						"id": "HOME"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_LIVE_TV",
+						"id": "LIVE_TV"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_EPG",
+						"id": "EPG"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_VIDEO_STORE",
+						"id": "VIDEOSTORE"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_MY_LIBRARY",
+						"id": "LIBRARY"
+					}
+				],
+				"app_config": {
+					"player_config": {
+						"hide_controls_after": 2.5,
+						"skip_back_interval": 10,
+						"skip_forward_interval": 30,
+						"binge_watching_threshold": 30,
+						"timeshift_duration": "",
+						"start_over_threshold": ""
+					},
+					"content_markers": {
+						"_DEFAULT": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NOW": {},
+						"CONTENT_MARKER_NOW_PLAYING": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_LIVE": {
+							"color": "#FAFAFA",
+							"background": "#6295AC",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NEXT": {
+							"color": "#121212",
+							"background": "#FAFAFA",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PAST": {},
+						"CONTENT_MARKER_RENTED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_RECORDED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PURCHASED": {},
+						"CONTENT_MARKER_NOT_SUBSCRIBED": {},
+						"CONTENT_MARKER_NEW": {},
+						"CONTENT_MARKER_FREE": {},
+						"CONTENT_MARKER_NEW_EPISODES": {}
+					},
+					"search_threshold": 3,
+					"player_settings": {
+						"skip_forward_interval": 60000,
+						"skip_back_interval": 30000,
+						"binge_watching_threshold": 30000,
+						"hide_controls_after": 5000,
+						"bookmark_threshold (sec)": null,
+						"bookmark_threshold": 95,
+						"startover_min_position_ms": 10000,
+						"bookmark_start_timeout": 180000,
+						"drm_protection": false,
+						"home_screen_player": {
+							"enabled": true,
+							"muted": false
+						},
+						"castlabs_settings": {
+							"pauseWhenInBackground": true,
+							"loop": false,
+							"enableHtmlCue": false,
+							"lowLatencyMode": false,
+							"suggestedPresentationDelay": 16,
+							"forceWaitForTracks": false,
+							"manifest": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"fuzzFactor": 0.5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"timeout": 10000
+								},
+								"availabilityWindowOverride": null,
+								"clockSyncUri": "",
+								"ignoreDrmInfo": false,
+								"xlinkFailGracefully": false,
+								"autoCorrectDrift": true
+							},
+							"abr": {
+								"enabled": true,
+								"defaultBandwidthEstimate": 2100000,
+								"switchInterval": 8,
+								"bandwidthUpgradeTarget": 0.85,
+								"bandwidthDowngradeTarget": 0.95,
+								"useSwitchIntervalForInitialSwitch": false,
+								"restrictions": {
+									"minWidth": 0,
+									"maxWidth": null,
+									"minHeight": 0,
+									"maxHeight": null,
+									"minPixels": 0,
+									"maxPixels": null,
+									"minBandwidth": 0,
+									"maxBandwidth": null
+								},
+								"initialRestrictions": {
+									"maxWidth": 1281,
+									"maxHeight": 721
+								}
+							},
+							"streaming": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"fuzzFactor": 0.5,
+									"timeout": 10000
+								},
+								"bufferingGoal": 12,
+								"rebufferingGoal": 8,
+								"bufferBehind": 20,
+								"ignoreTextStreamFailures": false,
+								"alwaysStreamText": false,
+								"relativeTextTimestamp": false,
+								"startAtSegmentBoundary": true,
+								"gapDetectionThreshold": 0.1,
+								"smallGapLimit": 0.5,
+								"jumpLargeGaps": true,
+								"durationBackoff": 1,
+								"maxSegmentToMediaOffset": 1,
+								"forceNativeTS": false,
+								"preferNativeHlsOnSafari": true,
+								"safeSeekOffset": 5,
+								"stallEnabled": true,
+								"stallThreshold": 3,
+								"stallSkip": 0.5,
+								"bufferLimitUpdateInterval": 0.5,
+								"overridePasp": false,
+								"enableLiveEdgeChasing": false,
+								"chasingRate": 1.15,
+								"startChasingAt": 5,
+								"stopChasingAt": 2,
+								"chaseJumpDistance": 10,
+								"patchEdgeWhenMixedContent": false,
+								"ignoreDrift": false,
+								"disableFragmentSupport": true,
+								"disableMergedFragments": true
+							},
+							"restrictions": {
+								"minWidth": 0,
+								"maxWidth": null,
+								"minHeight": 0,
+								"maxHeight": null,
+								"minPixels": 0,
+								"maxPixels": null,
+								"minBandwidth": 0,
+								"maxBandwidth": null
+							},
+							"tizen": {
+								"sideStreamText": false
+							},
+							"htmlcue": {
+								"stretchSmpteImage": false,
+								"enableResizeObserver": false
+							},
+							"ttml": {},
+							"textstyle": {
+								"fontFamily": "'Roboto', sans-serif",
+								"fontColor": "white",
+								"backgroundColor": "rgba(0, 0, 0, 0.75)"
+							}
+						},
+						"live_catchup_playback_threshold": 60,
+						"channel_switch_player_timeout": 400,
+						"household_track_list": "[]"
+					},
+					"epg_settings": {
+						"past_visibility": 518400000,
+						"future_visibility": 518400000,
+						"prime_time_dst": "GMT+2",
+						"prime_time": 68400000
+					},
+					"search_settings": {
+						"key_threshold": 2,
+						"trigger_timeout": 500
+					},
+					"audio_subtitles": {
+						"default_audio_track": "eng",
+						"default_subtitle_track": "bul",
+						"poeditor_language_mapping": {
+							"bul": "SETTINGS_BG",
+							"eng": "SETTINGS_EN",
+							"deu": "SETTINGS_DE",
+							"fra": "SETTINGS_FR",
+							"ita": "SETTINGS_IT",
+							"rus": "SETTINGS_RU",
+							"spa": "SETTINGS_ES",
+							"por": "SETTINGS_PT",
+							"zho": "SETTINGS_ZH_TW",
+							"ron": "SETTINGS_RO",
+							"srp": "SETTINGS_SR",
+							"nld": "SETTINGS_NL",
+							"tur": "SETTINGS_TR",
+							"hrv": "SETTINGS_HR",
+							"slv": "SETTINGS_SL",
+							"slk": "SETTINGS_SK",
+							"hun": "SETTINGS_HU",
+							"ces": "SETTINGS_CS",
+							"bos": "SETTINGS_BS",
+							"pol": "SETTINGS_PL",
+							"ara": "SETTINGS_AR",
+							"sqi": "SETTINGS_SQ",
+							"ger": "SETTINGS_DE",
+							"hye": "SETTINGS_HY",
+							"bg": "SETTINGS_BG",
+							"en": "SETTINGS_EN",
+							"de": "SETTINGS_DE",
+							"fr": "SETTINGS_FR",
+							"it": "SETTINGS_IT",
+							"ru": "SETTINGS_RU",
+							"es": "SETTINGS_ES",
+							"pt": "SETTINGS_PT",
+							"zh": "SETTINGS_ZH_TW",
+							"ro": "SETTINGS_RO",
+							"sr": "SETTINGS_SR",
+							"nl": "SETTINGS_NL",
+							"tr": "SETTINGS_TR",
+							"hr": "SETTINGS_HR",
+							"sl": "SETTINGS_SL",
+							"sk": "SETTINGS_SK",
+							"hu": "SETTINGS_HU",
+							"cs": "SETTINGS_CS",
+							"bs": "SETTINGS_BS",
+							"pl": "SETTINGS_PL",
+							"ar": "SETTINGS_AR",
+							"sq": "SETTINGS_SQ",
+							"hy": "SETTINGS_HY",
+							"ola": "SETTINGS_ORIGINAL",
+							"mt": "SETTINGS_MULTILINGUAL",
+							"mlt": "SETTINGS_MULTILINGUAL"
+						},
+						"available_audio_languages": {
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"hu": "hun",
+							"pl": "pol",
+							"hy": "hye",
+							"sr": "srp",
+							"hr": "hrv",
+							"cs": "ces",
+							"es": "spa",
+							"sk": "slk",
+							"tr": "tur",
+							"mlt": "mlt"
+						},
+						"available_subtitles_languages": {
+							"off": "none",
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"es": "spa",
+							"pt": "por",
+							"zh": "zho",
+							"ro": "ron",
+							"sr": "srp",
+							"nl": "nld",
+							"tr": "tur"
+						}
+					},
+					"miscellanious": {
+						"reminder_timer": 30,
+						"max_items_collection": 5,
+						"resume_threshold": 100,
+						"imagesettings": {
+							"thumbnail": {
+								"xsHeight": 200,
+								"height": 280,
+								"xlHeight": 808,
+								"width": 0
+							},
+							"background": {
+								"portrait": 780,
+								"landscape": 1080,
+								"width": 1920
+							},
+							"logo": {
+								"largeHeight": 216,
+								"largeWidth": 384,
+								"mediumHeight": 112,
+								"mediumWidth": 41,
+								"smallHeight": 29,
+								"smallWidth": 75
+							}
+						},
+						"reset_pass_qr_code": "https://media.a1.bg/a1xploretvgo/qr.png",
+						"gdpr_accepted": 1629362425341,
+						"radio_fallback_image": "https://smarttv-config.a1xploretv.bg/radioFallbackImage.png",
+						"is_series_recording_allowed": false,
+						"show_catchup_icon": true,
+						"vod_upsell_allowed": {
+							"Samsung TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"LG TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Hisense TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Philips TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"PC": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							}
+						},
+						"show_legacy_gdpr": true,
+						"event_not_available_timer": 30
+					},
+					"pin_settings": {
+						"allowed_wrong_attempts": 3,
+						"wrong_attempts_lock_duration": 30000,
+						"pin_session_expiry": null
+					},
+					"fti": {
+						"screens": [
+							{
+								"id": "0",
+								"name": "welcomeScreen",
+								"enabled": false,
+								"isNewVariant": false
+							},
+							{
+								"id": "1",
+								"name": "login",
+								"enabled": false
+							},
+							{
+								"id": "2",
+								"name": "languageSelection",
+								"enabled": false
+							},
+							{
+								"id": "3",
+								"name": "pinCode",
+								"enabled": false
+							},
+							{
+								"id": "4",
+								"name": "ageRating",
+								"enabled": false
+							},
+							{
+								"id": "5",
+								"name": "privacyPolicy",
+								"enabled": false
+							},
+							{
+								"id": "6",
+								"name": "region",
+								"enabled": false
+							},
+							{
+								"id": "7",
+								"name": "viewControl",
+								"enabled": false
+							},
+							{
+								"id": "8",
+								"name": "deviceManagement",
+								"enabled": false
+							},
+							{
+								"id": "9",
+								"name": "closingScreen",
+								"enabled": false
+							}
+						]
+					},
+					"settings_items": {
+						"language_elements": [
+							{
+								"id": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"title": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"info": "SETTINGS_LANGUAGE_UI_LANGUAGE_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							}
+						]
+					},
+					"uar": {
+						"logging_config": {
+							"endpoint": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/rest/events",
+							"batchBuffer": {
+								"timer": 60,
+								"maxSize": 100,
+								"maxRetries": 5
+							},
+							"retryBuffer": {
+								"timer": 300,
+								"maxSize": 100000,
+								"purgeSize": 0,
+								"requestSize": 500
+							},
+							"metrics": {
+								"timer": 900
+							}
+						}
+					},
+					"idp_auth": {
+						"settings": {
+							"activated": false,
+							"url": "https://tv.a1.bg/auth/realms/Xplore-TV/protocol/openid-connect",
+							"clientId": "xploretv",
+							"clientSecret": "CCrf4BraXewFinTpGiNzqzc2uGLf406r",
+							"clientScope": "openid",
+							"grantType": "urn:ietf:params:oauth:grant-type:device_code"
+						}
+					},
+					"languages": {
+						"en": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/en.json",
+							"image": "https://demo.3rdy.tv/cc-static-files/client-files/demo.3rdy.tv/ico-flag-united-states.png",
+							"default": true
+						},
+						"bg": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/bg.json",
+							"image": "bg",
+							"default": false
+						}
+					}
+				},
+				"layout_config": {
+					"title": "A1",
+					"tv_background_dark_base_primary": "#121212",
+					"tv_background_dark_base_secondary": "#1c1c1e",
+					"tv_background_dark_base_tertiary": "#2c2c2e",
+					"tv_background_light_primary": "#fafafa",
+					"tv_background_light_secondary": "#f2f2f2",
+					"tv_background_light_tertiary": "#fafafa",
+					"tv_stripe_item_shadow_a1_gray_light_default": "#12121233",
+					"tv_stripe_item_shadow_a1_gray_light_selected": "#12121240",
+					"tv_stripe_item_shadow_a1_gray_dark_default": "#fafafa38",
+					"tv_stripe_item_shadow_a1_gray_dark_selected": "#da291c52",
+					"tv_button_background_a1_cool_blue_dark_selected": "#6c9fb1",
+					"tv_button_background_a1_cool_blue_light_selected": "#6295ac",
+					"tv_button_background_a1_hot_red_dark_selected": "#da3326",
+					"tv_button_background_a1_hot_red_light_selected": "#da291c",
+					"tv_button_background_a1_gray_dark_primary": "#12121299",
+					"tv_button_background_a1_gray_dark_secondary": "#3c3c3e99",
+					"tv_button_background_a1_gray_light_primary": "#fafafa99",
+					"tv_button_background_a1_gray_light_secondary": "#e5e5e599",
+					"tv_button_shadow_a1_gray_light_selected": "#12121233",
+					"tv_button_shadow_a1_gray_dark_selected": "#da291c38",
+					"tv_fill_colors_a1_gray_dark_primary": "#6363665c",
+					"tv_fill_colors_a1_gray_dark_secondary": "#63636652",
+					"tv_fill_colors_a1_gray_dark_tertiary": "#6363663d",
+					"tv_fill_colors_a1_gray_dark_quaternary": "#6363662e",
+					"tv_fill_colors_a1_gray_light_primary": "#70707033",
+					"tv_fill_colors_a1_gray_light_secondary": "#7070702e",
+					"tv_fill_colors_a1_gray_light_tertiary": "#7070701f",
+					"tv_fill_colors_a1_gray_light_quaternary": "#70707014",
+					"tv_indicator_light": "#6666665c",
+					"tv_indicator_dark": "#2c2c2ea6",
+					"tv_label_colors_a1_hot_red_dark_primary": "#da3326",
+					"tv_label_colors_a1_hot_red_light_primary": "#da291c",
+					"tv_label_colors_a1_cool_blue_dark_primary": "#6c9fb1",
+					"tv_label_colors_a1_cool_blue_light_primary": "#6295ac",
+					"tv_label_colors_a1_gray_dark_primary": "#fafafa",
+					"tv_label_colors_a1_gray_dark_secondary": "#f4f4f599",
+					"tv_label_colors_a1_gray_dark_tertiary": "#f4f4f54d",
+					"tv_label_colors_a1_gray_dark_quaternary": "#f4f4f52e",
+					"tv_label_colors_a1_gray_light_primary": "#121212",
+					"tv_label_colors_a1_gray_light_secondary": "#33333399",
+					"tv_label_colors_a1_gray_light_tertiary": "#3333334d",
+					"tv_label_colors_a1_gray_light_quaternary": "#3333332e",
+					"tv_overlay_background_a1_gray_dark_no_blur_supported": "#121212f0",
+					"tv_overlay_background_a1_gray_light_no_blur_supported": "#fafafaf0",
+					"tv_overlay_background_a1_gray_dark": "#121212cc",
+					"tv_overlay_background_a1_gray_light": "#fafafacc",
+					"tv_functional_dark_activeadblock": "#ffcc00",
+					"tv_functional_light_activeadblock": "#ffcc00",
+					"black_color": "#000000",
+					"white_color": "#FFFFFF"
+				},
+				"api_config": {
+					"routes": {
+						"Auth": {
+							"graphql": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/graphql/4.0",
+							"Login": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Login",
+							"Logout": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Logout",
+							"CheckToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CheckToken",
+							"CloneToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CloneToken",
+							"GetToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/GetToken",
+							"SessionHB": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/hhSvc/SessionHB"
+						},
+						"DRM": {
+							"license_server_playready": "https://prls.a1xploretv.bg/PlayReady/rightsmanager.asmx",
+							"license_server_widevine": "https://wvps.a1xploretv.bg:8063/"
+						}
+					}
+				},
+				"version_metadata": {
+					"version_title": "disable idp",
+					"version_number": 85,
+					"active": true,
+					"created_at": 1711468254606
+				}
+			}
+		}
+	},
+	{
+		"_id": {
+			"$oid": "100000000000000000000002"
+		},
+		"version": 23,
+		"author": "Teodor Stefanov",
+		"date": "2024-04-03T05:11:09.073Z",
+		"opco": "A1AT",
+		"deviceType": "smarttv",
+		"environment": "production",
+		"active": true,
+		"config": {
+			"content_config": {
+				"settings_menu": [
+					{
+						"title": "SETTINGS_LANGUAGE",
+						"info": "SETTINGS_LANGUAGE_HINT",
+						"id": "languages",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_CHANNEL_LINEUP",
+						"info": "SETTINGS_CHANNEL_LINEUP_HINT",
+						"id": "lineup",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_LIVE_CLOCK",
+						"info": "SETTINGS_LIVE_CLOCK_HINT",
+						"id": "clock",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_PARENTAL_CONTROL",
+						"info": "SETTINGS_PARENTAL_CONTROL_HINT",
+						"href": "parental-control",
+						"id": "parental-control",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_PIN",
+						"info": "SETTINGS_PIN_HINT",
+						"href": "pin",
+						"id": "pin",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_APPEARANCE_TITLE",
+						"info": "SETTINGS_APPEARANCE_HINT",
+						"id": "appearance",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_DEVICE_MANAGEMENT",
+						"info": "SETTINGS_DEVICE_MANAGEMENT_HINT",
+						"href": "device-management",
+						"id": "device-management",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "STARTUP_BEHAVIOR",
+						"info": "STARTUP_BEHAVIOR_HINT",
+						"href": "startupBehavior",
+						"id": "startupBehavior",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_SCREEN_RECORDINGS_STORAGE_TITLE",
+						"info": "SETTINGS_SCREEN_RECORDINGS_STORAGE_HINT",
+						"id": "npvr",
+						"type": "Npvr",
+						"target": "_blank"
+					},
+					{
+						"title": "SCREEN_SETTINGS_ABOUT",
+						"id": "about",
+						"type": "Internal"
+					},
+					{
+						"title": "SCREEN_SETTINGS_LOGOUT",
+						"info": "SCREEN_SETTINGS_LOGOUT_HINT",
+						"id": "logout",
+						"tooltip": "logout_action_tooltip",
+						"type": "Action"
+					}
+				],
+				"main_menu": [
+					{
+						"title": "MODULE_MAIN_MENU_HOME",
+						"id": "HOME"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_LIVE_TV",
+						"id": "LIVE_TV"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_EPG",
+						"id": "EPG"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_VIDEO_STORE",
+						"id": "VIDEOSTORE"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_MY_LIBRARY",
+						"id": "LIBRARY"
+					}
+				],
+				"app_config": {
+					"player_config": {
+						"hide_controls_after": 2.5,
+						"skip_back_interval": 10,
+						"skip_forward_interval": 30,
+						"binge_watching_threshold": 30,
+						"timeshift_duration": "",
+						"start_over_threshold": ""
+					},
+					"content_markers": {
+						"_DEFAULT": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NOW": {},
+						"CONTENT_MARKER_NOW_PLAYING": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_LIVE": {
+							"color": "#FAFAFA",
+							"background": "#6295AC",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NEXT": {
+							"color": "#121212",
+							"background": "#FAFAFA",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PAST": {},
+						"CONTENT_MARKER_RENTED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_RECORDED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PURCHASED": {},
+						"CONTENT_MARKER_NOT_SUBSCRIBED": {},
+						"CONTENT_MARKER_NEW": {},
+						"CONTENT_MARKER_FREE": {},
+						"CONTENT_MARKER_NEW_EPISODES": {}
+					},
+					"search_threshold": 3,
+					"player_settings": {
+						"skip_forward_interval": 60000,
+						"skip_back_interval": 30000,
+						"binge_watching_threshold": 30000,
+						"hide_controls_after": 5000,
+						"bookmark_threshold (sec)": null,
+						"bookmark_threshold": 95,
+						"startover_min_position_ms": 10000,
+						"bookmark_start_timeout": 180000,
+						"drm_protection": false,
+						"home_screen_player": {
+							"enabled": true,
+							"muted": false
+						},
+						"castlabs_settings": {
+							"pauseWhenInBackground": true,
+							"loop": false,
+							"enableHtmlCue": false,
+							"lowLatencyMode": false,
+							"suggestedPresentationDelay": 16,
+							"forceWaitForTracks": false,
+							"manifest": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"fuzzFactor": 0.5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"timeout": 10000
+								},
+								"availabilityWindowOverride": null,
+								"clockSyncUri": "",
+								"ignoreDrmInfo": false,
+								"xlinkFailGracefully": false,
+								"autoCorrectDrift": true
+							},
+							"abr": {
+								"enabled": true,
+								"defaultBandwidthEstimate": 2100000,
+								"switchInterval": 8,
+								"bandwidthUpgradeTarget": 0.85,
+								"bandwidthDowngradeTarget": 0.95,
+								"useSwitchIntervalForInitialSwitch": false,
+								"restrictions": {
+									"minWidth": 0,
+									"maxWidth": null,
+									"minHeight": 0,
+									"maxHeight": null,
+									"minPixels": 0,
+									"maxPixels": null,
+									"minBandwidth": 0,
+									"maxBandwidth": null
+								},
+								"initialRestrictions": {
+									"maxWidth": 1281,
+									"maxHeight": 721
+								}
+							},
+							"streaming": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"fuzzFactor": 0.5,
+									"timeout": 10000
+								},
+								"bufferingGoal": 12,
+								"rebufferingGoal": 8,
+								"bufferBehind": 20,
+								"ignoreTextStreamFailures": false,
+								"alwaysStreamText": false,
+								"relativeTextTimestamp": false,
+								"startAtSegmentBoundary": true,
+								"gapDetectionThreshold": 0.1,
+								"smallGapLimit": 0.5,
+								"jumpLargeGaps": true,
+								"durationBackoff": 1,
+								"maxSegmentToMediaOffset": 1,
+								"forceNativeTS": false,
+								"preferNativeHlsOnSafari": true,
+								"safeSeekOffset": 5,
+								"stallEnabled": true,
+								"stallThreshold": 3,
+								"stallSkip": 0.5,
+								"bufferLimitUpdateInterval": 0.5,
+								"overridePasp": false,
+								"enableLiveEdgeChasing": false,
+								"chasingRate": 1.15,
+								"startChasingAt": 5,
+								"stopChasingAt": 2,
+								"chaseJumpDistance": 10,
+								"patchEdgeWhenMixedContent": false,
+								"ignoreDrift": false,
+								"disableFragmentSupport": true,
+								"disableMergedFragments": true
+							},
+							"restrictions": {
+								"minWidth": 0,
+								"maxWidth": null,
+								"minHeight": 0,
+								"maxHeight": null,
+								"minPixels": 0,
+								"maxPixels": null,
+								"minBandwidth": 0,
+								"maxBandwidth": null
+							},
+							"tizen": {
+								"sideStreamText": false
+							},
+							"htmlcue": {
+								"stretchSmpteImage": false,
+								"enableResizeObserver": false
+							},
+							"ttml": {},
+							"textstyle": {
+								"fontFamily": "'Roboto', sans-serif",
+								"fontColor": "white",
+								"backgroundColor": "rgba(0, 0, 0, 0.75)"
+							}
+						},
+						"live_catchup_playback_threshold": 60,
+						"channel_switch_player_timeout": 400,
+						"household_track_list": "[]"
+					},
+					"epg_settings": {
+						"past_visibility": 518400000,
+						"future_visibility": 518400000,
+						"prime_time_dst": "GMT+2",
+						"prime_time": 68400000
+					},
+					"search_settings": {
+						"key_threshold": 2,
+						"trigger_timeout": 500
+					},
+					"audio_subtitles": {
+						"default_audio_track": "eng",
+						"default_subtitle_track": "bul",
+						"poeditor_language_mapping": {
+							"bul": "SETTINGS_BG",
+							"eng": "SETTINGS_EN",
+							"deu": "SETTINGS_DE",
+							"fra": "SETTINGS_FR",
+							"ita": "SETTINGS_IT",
+							"rus": "SETTINGS_RU",
+							"spa": "SETTINGS_ES",
+							"por": "SETTINGS_PT",
+							"zho": "SETTINGS_ZH_TW",
+							"ron": "SETTINGS_RO",
+							"srp": "SETTINGS_SR",
+							"nld": "SETTINGS_NL",
+							"tur": "SETTINGS_TR",
+							"hrv": "SETTINGS_HR",
+							"slv": "SETTINGS_SL",
+							"slk": "SETTINGS_SK",
+							"hun": "SETTINGS_HU",
+							"ces": "SETTINGS_CS",
+							"bos": "SETTINGS_BS",
+							"pol": "SETTINGS_PL",
+							"ara": "SETTINGS_AR",
+							"sqi": "SETTINGS_SQ",
+							"ger": "SETTINGS_DE",
+							"hye": "SETTINGS_HY",
+							"bg": "SETTINGS_BG",
+							"en": "SETTINGS_EN",
+							"de": "SETTINGS_DE",
+							"fr": "SETTINGS_FR",
+							"it": "SETTINGS_IT",
+							"ru": "SETTINGS_RU",
+							"es": "SETTINGS_ES",
+							"pt": "SETTINGS_PT",
+							"zh": "SETTINGS_ZH_TW",
+							"ro": "SETTINGS_RO",
+							"sr": "SETTINGS_SR",
+							"nl": "SETTINGS_NL",
+							"tr": "SETTINGS_TR",
+							"hr": "SETTINGS_HR",
+							"sl": "SETTINGS_SL",
+							"sk": "SETTINGS_SK",
+							"hu": "SETTINGS_HU",
+							"cs": "SETTINGS_CS",
+							"bs": "SETTINGS_BS",
+							"pl": "SETTINGS_PL",
+							"ar": "SETTINGS_AR",
+							"sq": "SETTINGS_SQ",
+							"hy": "SETTINGS_HY",
+							"ola": "SETTINGS_ORIGINAL",
+							"mt": "SETTINGS_MULTILINGUAL",
+							"mlt": "SETTINGS_MULTILINGUAL"
+						},
+						"available_audio_languages": {
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"hu": "hun",
+							"pl": "pol",
+							"hy": "hye",
+							"sr": "srp",
+							"hr": "hrv",
+							"cs": "ces",
+							"es": "spa",
+							"sk": "slk",
+							"tr": "tur",
+							"mlt": "mlt"
+						},
+						"available_subtitles_languages": {
+							"off": "none",
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"es": "spa",
+							"pt": "por",
+							"zh": "zho",
+							"ro": "ron",
+							"sr": "srp",
+							"nl": "nld",
+							"tr": "tur"
+						}
+					},
+					"miscellanious": {
+						"reminder_timer": 30,
+						"max_items_collection": 5,
+						"resume_threshold": 100,
+						"imagesettings": {
+							"thumbnail": {
+								"xsHeight": 200,
+								"height": 280,
+								"xlHeight": 808,
+								"width": 0
+							},
+							"background": {
+								"portrait": 780,
+								"landscape": 1080,
+								"width": 1920
+							},
+							"logo": {
+								"largeHeight": 216,
+								"largeWidth": 384,
+								"mediumHeight": 112,
+								"mediumWidth": 41,
+								"smallHeight": 29,
+								"smallWidth": 75
+							}
+						},
+						"reset_pass_qr_code": "https://media.a1.bg/a1xploretvgo/qr.png",
+						"gdpr_accepted": 1629362425341,
+						"radio_fallback_image": "https://smarttv-config.a1xploretv.bg/radioFallbackImage.png",
+						"is_series_recording_allowed": false,
+						"show_catchup_icon": true,
+						"vod_upsell_allowed": {
+							"Samsung TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"LG TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Hisense TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Philips TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"PC": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							}
+						},
+						"show_legacy_gdpr": true,
+						"event_not_available_timer": 30
+					},
+					"pin_settings": {
+						"allowed_wrong_attempts": 3,
+						"wrong_attempts_lock_duration": 30000,
+						"pin_session_expiry": null
+					},
+					"fti": {
+						"screens": [
+							{
+								"id": "0",
+								"name": "welcomeScreen",
+								"enabled": false,
+								"isNewVariant": false
+							},
+							{
+								"id": "1",
+								"name": "login",
+								"enabled": false
+							},
+							{
+								"id": "2",
+								"name": "languageSelection",
+								"enabled": false
+							},
+							{
+								"id": "3",
+								"name": "pinCode",
+								"enabled": false
+							},
+							{
+								"id": "4",
+								"name": "ageRating",
+								"enabled": false
+							},
+							{
+								"id": "5",
+								"name": "privacyPolicy",
+								"enabled": false
+							},
+							{
+								"id": "6",
+								"name": "region",
+								"enabled": false
+							},
+							{
+								"id": "7",
+								"name": "viewControl",
+								"enabled": false
+							},
+							{
+								"id": "8",
+								"name": "deviceManagement",
+								"enabled": false
+							},
+							{
+								"id": "9",
+								"name": "closingScreen",
+								"enabled": false
+							}
+						]
+					},
+					"settings_items": {
+						"language_elements": [
+							{
+								"id": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"title": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"info": "SETTINGS_LANGUAGE_UI_LANGUAGE_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							}
+						]
+					},
+					"uar": {
+						"logging_config": {
+							"endpoint": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/rest/events",
+							"batchBuffer": {
+								"timer": 60,
+								"maxSize": 100,
+								"maxRetries": 5
+							},
+							"retryBuffer": {
+								"timer": 300,
+								"maxSize": 100000,
+								"purgeSize": 0,
+								"requestSize": 500
+							},
+							"metrics": {
+								"timer": 900
+							}
+						}
+					},
+					"idp_auth": {
+						"settings": {
+							"activated": false,
+							"url": "https://tv.a1.bg/auth/realms/Xplore-TV/protocol/openid-connect",
+							"clientId": "xploretv",
+							"clientSecret": "CCrf4BraXewFinTpGiNzqzc2uGLf406r",
+							"clientScope": "openid",
+							"grantType": "urn:ietf:params:oauth:grant-type:device_code"
+						}
+					},
+					"languages": {
+						"en": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/en.json",
+							"image": "https://demo.3rdy.tv/cc-static-files/client-files/demo.3rdy.tv/ico-flag-united-states.png",
+							"default": true
+						},
+						"bg": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/bg.json",
+							"image": "bg",
+							"default": false
+						}
+					}
+				},
+				"layout_config": {
+					"title": "A1",
+					"tv_background_dark_base_primary": "#121212",
+					"tv_background_dark_base_secondary": "#1c1c1e",
+					"tv_background_dark_base_tertiary": "#2c2c2e",
+					"tv_background_light_primary": "#fafafa",
+					"tv_background_light_secondary": "#f2f2f2",
+					"tv_background_light_tertiary": "#fafafa",
+					"tv_stripe_item_shadow_a1_gray_light_default": "#12121233",
+					"tv_stripe_item_shadow_a1_gray_light_selected": "#12121240",
+					"tv_stripe_item_shadow_a1_gray_dark_default": "#fafafa38",
+					"tv_stripe_item_shadow_a1_gray_dark_selected": "#da291c52",
+					"tv_button_background_a1_cool_blue_dark_selected": "#6c9fb1",
+					"tv_button_background_a1_cool_blue_light_selected": "#6295ac",
+					"tv_button_background_a1_hot_red_dark_selected": "#da3326",
+					"tv_button_background_a1_hot_red_light_selected": "#da291c",
+					"tv_button_background_a1_gray_dark_primary": "#12121299",
+					"tv_button_background_a1_gray_dark_secondary": "#3c3c3e99",
+					"tv_button_background_a1_gray_light_primary": "#fafafa99",
+					"tv_button_background_a1_gray_light_secondary": "#e5e5e599",
+					"tv_button_shadow_a1_gray_light_selected": "#12121233",
+					"tv_button_shadow_a1_gray_dark_selected": "#da291c38",
+					"tv_fill_colors_a1_gray_dark_primary": "#6363665c",
+					"tv_fill_colors_a1_gray_dark_secondary": "#63636652",
+					"tv_fill_colors_a1_gray_dark_tertiary": "#6363663d",
+					"tv_fill_colors_a1_gray_dark_quaternary": "#6363662e",
+					"tv_fill_colors_a1_gray_light_primary": "#70707033",
+					"tv_fill_colors_a1_gray_light_secondary": "#7070702e",
+					"tv_fill_colors_a1_gray_light_tertiary": "#7070701f",
+					"tv_fill_colors_a1_gray_light_quaternary": "#70707014",
+					"tv_indicator_light": "#6666665c",
+					"tv_indicator_dark": "#2c2c2ea6",
+					"tv_label_colors_a1_hot_red_dark_primary": "#da3326",
+					"tv_label_colors_a1_hot_red_light_primary": "#da291c",
+					"tv_label_colors_a1_cool_blue_dark_primary": "#6c9fb1",
+					"tv_label_colors_a1_cool_blue_light_primary": "#6295ac",
+					"tv_label_colors_a1_gray_dark_primary": "#fafafa",
+					"tv_label_colors_a1_gray_dark_secondary": "#f4f4f599",
+					"tv_label_colors_a1_gray_dark_tertiary": "#f4f4f54d",
+					"tv_label_colors_a1_gray_dark_quaternary": "#f4f4f52e",
+					"tv_label_colors_a1_gray_light_primary": "#121212",
+					"tv_label_colors_a1_gray_light_secondary": "#33333399",
+					"tv_label_colors_a1_gray_light_tertiary": "#3333334d",
+					"tv_label_colors_a1_gray_light_quaternary": "#3333332e",
+					"tv_overlay_background_a1_gray_dark_no_blur_supported": "#121212f0",
+					"tv_overlay_background_a1_gray_light_no_blur_supported": "#fafafaf0",
+					"tv_overlay_background_a1_gray_dark": "#121212cc",
+					"tv_overlay_background_a1_gray_light": "#fafafacc",
+					"tv_functional_dark_activeadblock": "#ffcc00",
+					"tv_functional_light_activeadblock": "#ffcc00",
+					"black_color": "#000000",
+					"white_color": "#FFFFFF"
+				},
+				"api_config": {
+					"routes": {
+						"Auth": {
+							"graphql": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/graphql/4.0",
+							"Login": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Login",
+							"Logout": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Logout",
+							"CheckToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CheckToken",
+							"CloneToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CloneToken",
+							"GetToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/GetToken",
+							"SessionHB": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/hhSvc/SessionHB"
+						},
+						"DRM": {
+							"license_server_playready": "https://prls.a1xploretv.bg/PlayReady/rightsmanager.asmx",
+							"license_server_widevine": "https://wvps.a1xploretv.bg:8063/"
+						}
+					}
+				},
+				"version_metadata": {
+					"version_title": "disable idp",
+					"version_number": 85,
+					"active": true,
+					"created_at": 1711468254606
+				}
+			}
+		}
+	},
+	{
+		"_id": {
+			"$oid": "000000000000000000000012"
+		},
+		"version": 525,
+		"author": "Teodor Stefanov",
+		"date": "2024-04-03T05:11:09.073Z",
+		"opco": "A1AT",
+		"deviceType": "smarttv",
+		"environment": "integration",
+		"active": true,
+		"config": {
+			"content_config": {
+				"settings_menu": [
+					{
+						"title": "SETTINGS_LANGUAGE",
+						"info": "SETTINGS_LANGUAGE_HINT",
+						"id": "languages",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_CHANNEL_LINEUP",
+						"info": "SETTINGS_CHANNEL_LINEUP_HINT",
+						"id": "lineup",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_LIVE_CLOCK",
+						"info": "SETTINGS_LIVE_CLOCK_HINT",
+						"id": "clock",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_PARENTAL_CONTROL",
+						"info": "SETTINGS_PARENTAL_CONTROL_HINT",
+						"href": "parental-control",
+						"id": "parental-control",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_PIN",
+						"info": "SETTINGS_PIN_HINT",
+						"href": "pin",
+						"id": "pin",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_APPEARANCE_TITLE",
+						"info": "SETTINGS_APPEARANCE_HINT",
+						"id": "appearance",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_DEVICE_MANAGEMENT",
+						"info": "SETTINGS_DEVICE_MANAGEMENT_HINT",
+						"href": "device-management",
+						"id": "device-management",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "STARTUP_BEHAVIOR",
+						"info": "STARTUP_BEHAVIOR_HINT",
+						"href": "startupBehavior",
+						"id": "startupBehavior",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_SCREEN_RECORDINGS_STORAGE_TITLE",
+						"info": "SETTINGS_SCREEN_RECORDINGS_STORAGE_HINT",
+						"id": "npvr",
+						"type": "Npvr",
+						"target": "_blank"
+					},
+					{
+						"title": "SCREEN_SETTINGS_ABOUT",
+						"id": "about",
+						"type": "Internal"
+					},
+					{
+						"title": "SCREEN_SETTINGS_LOGOUT",
+						"info": "SCREEN_SETTINGS_LOGOUT_HINT",
+						"id": "logout",
+						"tooltip": "logout_action_tooltip",
+						"type": "Action"
+					}
+				],
+				"main_menu": [
+					{
+						"title": "MODULE_MAIN_MENU_HOME",
+						"id": "HOME"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_LIVE_TV",
+						"id": "LIVE_TV"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_EPG",
+						"id": "EPG"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_VIDEO_STORE",
+						"id": "VIDEOSTORE"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_MY_LIBRARY",
+						"id": "LIBRARY"
+					}
+				],
+				"app_config": {
+					"player_config": {
+						"hide_controls_after": 2.5,
+						"skip_back_interval": 10,
+						"skip_forward_interval": 30,
+						"binge_watching_threshold": 30,
+						"timeshift_duration": "",
+						"start_over_threshold": ""
+					},
+					"content_markers": {
+						"_DEFAULT": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NOW": {},
+						"CONTENT_MARKER_NOW_PLAYING": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_LIVE": {
+							"color": "#FAFAFA",
+							"background": "#6295AC",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NEXT": {
+							"color": "#121212",
+							"background": "#FAFAFA",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PAST": {},
+						"CONTENT_MARKER_RENTED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_RECORDED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PURCHASED": {},
+						"CONTENT_MARKER_NOT_SUBSCRIBED": {},
+						"CONTENT_MARKER_NEW": {},
+						"CONTENT_MARKER_FREE": {},
+						"CONTENT_MARKER_NEW_EPISODES": {}
+					},
+					"search_threshold": 3,
+					"player_settings": {
+						"skip_forward_interval": 60000,
+						"skip_back_interval": 30000,
+						"binge_watching_threshold": 30000,
+						"hide_controls_after": 5000,
+						"bookmark_threshold (sec)": null,
+						"bookmark_threshold": 95,
+						"startover_min_position_ms": 10000,
+						"bookmark_start_timeout": 180000,
+						"drm_protection": false,
+						"home_screen_player": {
+							"enabled": true,
+							"muted": false
+						},
+						"castlabs_settings": {
+							"pauseWhenInBackground": true,
+							"loop": false,
+							"enableHtmlCue": false,
+							"lowLatencyMode": false,
+							"suggestedPresentationDelay": 16,
+							"forceWaitForTracks": false,
+							"manifest": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"fuzzFactor": 0.5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"timeout": 10000
+								},
+								"availabilityWindowOverride": null,
+								"clockSyncUri": "",
+								"ignoreDrmInfo": false,
+								"xlinkFailGracefully": false,
+								"autoCorrectDrift": true
+							},
+							"abr": {
+								"enabled": true,
+								"defaultBandwidthEstimate": 2100000,
+								"switchInterval": 8,
+								"bandwidthUpgradeTarget": 0.85,
+								"bandwidthDowngradeTarget": 0.95,
+								"useSwitchIntervalForInitialSwitch": false,
+								"restrictions": {
+									"minWidth": 0,
+									"maxWidth": null,
+									"minHeight": 0,
+									"maxHeight": null,
+									"minPixels": 0,
+									"maxPixels": null,
+									"minBandwidth": 0,
+									"maxBandwidth": null
+								},
+								"initialRestrictions": {
+									"maxWidth": 1281,
+									"maxHeight": 721
+								}
+							},
+							"streaming": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"fuzzFactor": 0.5,
+									"timeout": 10000
+								},
+								"bufferingGoal": 12,
+								"rebufferingGoal": 8,
+								"bufferBehind": 20,
+								"ignoreTextStreamFailures": false,
+								"alwaysStreamText": false,
+								"relativeTextTimestamp": false,
+								"startAtSegmentBoundary": true,
+								"gapDetectionThreshold": 0.1,
+								"smallGapLimit": 0.5,
+								"jumpLargeGaps": true,
+								"durationBackoff": 1,
+								"maxSegmentToMediaOffset": 1,
+								"forceNativeTS": false,
+								"preferNativeHlsOnSafari": true,
+								"safeSeekOffset": 5,
+								"stallEnabled": true,
+								"stallThreshold": 3,
+								"stallSkip": 0.5,
+								"bufferLimitUpdateInterval": 0.5,
+								"overridePasp": false,
+								"enableLiveEdgeChasing": false,
+								"chasingRate": 1.15,
+								"startChasingAt": 5,
+								"stopChasingAt": 2,
+								"chaseJumpDistance": 10,
+								"patchEdgeWhenMixedContent": false,
+								"ignoreDrift": false,
+								"disableFragmentSupport": true,
+								"disableMergedFragments": true
+							},
+							"restrictions": {
+								"minWidth": 0,
+								"maxWidth": null,
+								"minHeight": 0,
+								"maxHeight": null,
+								"minPixels": 0,
+								"maxPixels": null,
+								"minBandwidth": 0,
+								"maxBandwidth": null
+							},
+							"tizen": {
+								"sideStreamText": false
+							},
+							"htmlcue": {
+								"stretchSmpteImage": false,
+								"enableResizeObserver": false
+							},
+							"ttml": {},
+							"textstyle": {
+								"fontFamily": "'Roboto', sans-serif",
+								"fontColor": "white",
+								"backgroundColor": "rgba(0, 0, 0, 0.75)"
+							}
+						},
+						"live_catchup_playback_threshold": 60,
+						"channel_switch_player_timeout": 400,
+						"household_track_list": "[]"
+					},
+					"epg_settings": {
+						"past_visibility": 518400000,
+						"future_visibility": 518400000,
+						"prime_time_dst": "GMT+2",
+						"prime_time": 68400000
+					},
+					"search_settings": {
+						"key_threshold": 2,
+						"trigger_timeout": 500
+					},
+					"audio_subtitles": {
+						"default_audio_track": "eng",
+						"default_subtitle_track": "bul",
+						"poeditor_language_mapping": {
+							"bul": "SETTINGS_BG",
+							"eng": "SETTINGS_EN",
+							"deu": "SETTINGS_DE",
+							"fra": "SETTINGS_FR",
+							"ita": "SETTINGS_IT",
+							"rus": "SETTINGS_RU",
+							"spa": "SETTINGS_ES",
+							"por": "SETTINGS_PT",
+							"zho": "SETTINGS_ZH_TW",
+							"ron": "SETTINGS_RO",
+							"srp": "SETTINGS_SR",
+							"nld": "SETTINGS_NL",
+							"tur": "SETTINGS_TR",
+							"hrv": "SETTINGS_HR",
+							"slv": "SETTINGS_SL",
+							"slk": "SETTINGS_SK",
+							"hun": "SETTINGS_HU",
+							"ces": "SETTINGS_CS",
+							"bos": "SETTINGS_BS",
+							"pol": "SETTINGS_PL",
+							"ara": "SETTINGS_AR",
+							"sqi": "SETTINGS_SQ",
+							"ger": "SETTINGS_DE",
+							"hye": "SETTINGS_HY",
+							"bg": "SETTINGS_BG",
+							"en": "SETTINGS_EN",
+							"de": "SETTINGS_DE",
+							"fr": "SETTINGS_FR",
+							"it": "SETTINGS_IT",
+							"ru": "SETTINGS_RU",
+							"es": "SETTINGS_ES",
+							"pt": "SETTINGS_PT",
+							"zh": "SETTINGS_ZH_TW",
+							"ro": "SETTINGS_RO",
+							"sr": "SETTINGS_SR",
+							"nl": "SETTINGS_NL",
+							"tr": "SETTINGS_TR",
+							"hr": "SETTINGS_HR",
+							"sl": "SETTINGS_SL",
+							"sk": "SETTINGS_SK",
+							"hu": "SETTINGS_HU",
+							"cs": "SETTINGS_CS",
+							"bs": "SETTINGS_BS",
+							"pl": "SETTINGS_PL",
+							"ar": "SETTINGS_AR",
+							"sq": "SETTINGS_SQ",
+							"hy": "SETTINGS_HY",
+							"ola": "SETTINGS_ORIGINAL",
+							"mt": "SETTINGS_MULTILINGUAL",
+							"mlt": "SETTINGS_MULTILINGUAL"
+						},
+						"available_audio_languages": {
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"hu": "hun",
+							"pl": "pol",
+							"hy": "hye",
+							"sr": "srp",
+							"hr": "hrv",
+							"cs": "ces",
+							"es": "spa",
+							"sk": "slk",
+							"tr": "tur",
+							"mlt": "mlt"
+						},
+						"available_subtitles_languages": {
+							"off": "none",
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"es": "spa",
+							"pt": "por",
+							"zh": "zho",
+							"ro": "ron",
+							"sr": "srp",
+							"nl": "nld",
+							"tr": "tur"
+						}
+					},
+					"miscellanious": {
+						"reminder_timer": 30,
+						"max_items_collection": 5,
+						"resume_threshold": 100,
+						"imagesettings": {
+							"thumbnail": {
+								"xsHeight": 200,
+								"height": 280,
+								"xlHeight": 808,
+								"width": 0
+							},
+							"background": {
+								"portrait": 780,
+								"landscape": 1080,
+								"width": 1920
+							},
+							"logo": {
+								"largeHeight": 216,
+								"largeWidth": 384,
+								"mediumHeight": 112,
+								"mediumWidth": 41,
+								"smallHeight": 29,
+								"smallWidth": 75
+							}
+						},
+						"reset_pass_qr_code": "https://media.a1.bg/a1xploretvgo/qr.png",
+						"gdpr_accepted": 1629362425341,
+						"radio_fallback_image": "https://smarttv-config.a1xploretv.bg/radioFallbackImage.png",
+						"is_series_recording_allowed": false,
+						"show_catchup_icon": true,
+						"vod_upsell_allowed": {
+							"Samsung TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"LG TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Hisense TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Philips TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"PC": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							}
+						},
+						"show_legacy_gdpr": true,
+						"event_not_available_timer": 30
+					},
+					"pin_settings": {
+						"allowed_wrong_attempts": 3,
+						"wrong_attempts_lock_duration": 30000,
+						"pin_session_expiry": null
+					},
+					"fti": {
+						"screens": [
+							{
+								"id": "0",
+								"name": "welcomeScreen",
+								"enabled": false,
+								"isNewVariant": false
+							},
+							{
+								"id": "1",
+								"name": "login",
+								"enabled": false
+							},
+							{
+								"id": "2",
+								"name": "languageSelection",
+								"enabled": false
+							},
+							{
+								"id": "3",
+								"name": "pinCode",
+								"enabled": false
+							},
+							{
+								"id": "4",
+								"name": "ageRating",
+								"enabled": false
+							},
+							{
+								"id": "5",
+								"name": "privacyPolicy",
+								"enabled": false
+							},
+							{
+								"id": "6",
+								"name": "region",
+								"enabled": false
+							},
+							{
+								"id": "7",
+								"name": "viewControl",
+								"enabled": false
+							},
+							{
+								"id": "8",
+								"name": "deviceManagement",
+								"enabled": false
+							},
+							{
+								"id": "9",
+								"name": "closingScreen",
+								"enabled": false
+							}
+						]
+					},
+					"settings_items": {
+						"language_elements": [
+							{
+								"id": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"title": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"info": "SETTINGS_LANGUAGE_UI_LANGUAGE_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							}
+						]
+					},
+					"uar": {
+						"logging_config": {
+							"endpoint": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/rest/events",
+							"batchBuffer": {
+								"timer": 60,
+								"maxSize": 100,
+								"maxRetries": 5
+							},
+							"retryBuffer": {
+								"timer": 300,
+								"maxSize": 100000,
+								"purgeSize": 0,
+								"requestSize": 500
+							},
+							"metrics": {
+								"timer": 900
+							}
+						}
+					},
+					"idp_auth": {
+						"settings": {
+							"activated": false,
+							"url": "https://tv.a1.bg/auth/realms/Xplore-TV/protocol/openid-connect",
+							"clientId": "xploretv",
+							"clientSecret": "CCrf4BraXewFinTpGiNzqzc2uGLf406r",
+							"clientScope": "openid",
+							"grantType": "urn:ietf:params:oauth:grant-type:device_code"
+						}
+					},
+					"languages": {
+						"en": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/en.json",
+							"image": "https://demo.3rdy.tv/cc-static-files/client-files/demo.3rdy.tv/ico-flag-united-states.png",
+							"default": true
+						},
+						"bg": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/bg.json",
+							"image": "bg",
+							"default": false
+						}
+					}
+				},
+				"layout_config": {
+					"title": "A1",
+					"tv_background_dark_base_primary": "#121212",
+					"tv_background_dark_base_secondary": "#1c1c1e",
+					"tv_background_dark_base_tertiary": "#2c2c2e",
+					"tv_background_light_primary": "#fafafa",
+					"tv_background_light_secondary": "#f2f2f2",
+					"tv_background_light_tertiary": "#fafafa",
+					"tv_stripe_item_shadow_a1_gray_light_default": "#12121233",
+					"tv_stripe_item_shadow_a1_gray_light_selected": "#12121240",
+					"tv_stripe_item_shadow_a1_gray_dark_default": "#fafafa38",
+					"tv_stripe_item_shadow_a1_gray_dark_selected": "#da291c52",
+					"tv_button_background_a1_cool_blue_dark_selected": "#6c9fb1",
+					"tv_button_background_a1_cool_blue_light_selected": "#6295ac",
+					"tv_button_background_a1_hot_red_dark_selected": "#da3326",
+					"tv_button_background_a1_hot_red_light_selected": "#da291c",
+					"tv_button_background_a1_gray_dark_primary": "#12121299",
+					"tv_button_background_a1_gray_dark_secondary": "#3c3c3e99",
+					"tv_button_background_a1_gray_light_primary": "#fafafa99",
+					"tv_button_background_a1_gray_light_secondary": "#e5e5e599",
+					"tv_button_shadow_a1_gray_light_selected": "#12121233",
+					"tv_button_shadow_a1_gray_dark_selected": "#da291c38",
+					"tv_fill_colors_a1_gray_dark_primary": "#6363665c",
+					"tv_fill_colors_a1_gray_dark_secondary": "#63636652",
+					"tv_fill_colors_a1_gray_dark_tertiary": "#6363663d",
+					"tv_fill_colors_a1_gray_dark_quaternary": "#6363662e",
+					"tv_fill_colors_a1_gray_light_primary": "#70707033",
+					"tv_fill_colors_a1_gray_light_secondary": "#7070702e",
+					"tv_fill_colors_a1_gray_light_tertiary": "#7070701f",
+					"tv_fill_colors_a1_gray_light_quaternary": "#70707014",
+					"tv_indicator_light": "#6666665c",
+					"tv_indicator_dark": "#2c2c2ea6",
+					"tv_label_colors_a1_hot_red_dark_primary": "#da3326",
+					"tv_label_colors_a1_hot_red_light_primary": "#da291c",
+					"tv_label_colors_a1_cool_blue_dark_primary": "#6c9fb1",
+					"tv_label_colors_a1_cool_blue_light_primary": "#6295ac",
+					"tv_label_colors_a1_gray_dark_primary": "#fafafa",
+					"tv_label_colors_a1_gray_dark_secondary": "#f4f4f599",
+					"tv_label_colors_a1_gray_dark_tertiary": "#f4f4f54d",
+					"tv_label_colors_a1_gray_dark_quaternary": "#f4f4f52e",
+					"tv_label_colors_a1_gray_light_primary": "#121212",
+					"tv_label_colors_a1_gray_light_secondary": "#33333399",
+					"tv_label_colors_a1_gray_light_tertiary": "#3333334d",
+					"tv_label_colors_a1_gray_light_quaternary": "#3333332e",
+					"tv_overlay_background_a1_gray_dark_no_blur_supported": "#121212f0",
+					"tv_overlay_background_a1_gray_light_no_blur_supported": "#fafafaf0",
+					"tv_overlay_background_a1_gray_dark": "#121212cc",
+					"tv_overlay_background_a1_gray_light": "#fafafacc",
+					"tv_functional_dark_activeadblock": "#ffcc00",
+					"tv_functional_light_activeadblock": "#ffcc00",
+					"black_color": "#000000",
+					"white_color": "#FFFFFF"
+				},
+				"api_config": {
+					"routes": {
+						"Auth": {
+							"graphql": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/graphql/4.0",
+							"Login": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Login",
+							"Logout": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Logout",
+							"CheckToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CheckToken",
+							"CloneToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CloneToken",
+							"GetToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/GetToken",
+							"SessionHB": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/hhSvc/SessionHB"
+						},
+						"DRM": {
+							"license_server_playready": "https://prls.a1xploretv.bg/PlayReady/rightsmanager.asmx",
+							"license_server_widevine": "https://wvps.a1xploretv.bg:8063/"
+						}
+					}
+				},
+				"version_metadata": {
+					"version_title": "disable idp",
+					"version_number": 85,
+					"active": true,
+					"created_at": 1711468254606
+				}
+			}
+		}
+	},
+	{
+		"_id": {
+			"$oid": "000000000000000000000322"
+		},
+		"version": 5,
+		"author": "Teodor Stefanov",
+		"date": "2024-04-03T05:11:09.073Z",
+		"opco": "A1AT",
+		"deviceType": "smarttv",
+		"environment": "development",
+		"active": true,
+		"config": {
+			"content_config": {
+				"settings_menu": [
+					{
+						"title": "SETTINGS_LANGUAGE",
+						"info": "SETTINGS_LANGUAGE_HINT",
+						"id": "languages",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_CHANNEL_LINEUP",
+						"info": "SETTINGS_CHANNEL_LINEUP_HINT",
+						"id": "lineup",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_LIVE_CLOCK",
+						"info": "SETTINGS_LIVE_CLOCK_HINT",
+						"id": "clock",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_PARENTAL_CONTROL",
+						"info": "SETTINGS_PARENTAL_CONTROL_HINT",
+						"href": "parental-control",
+						"id": "parental-control",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_PIN",
+						"info": "SETTINGS_PIN_HINT",
+						"href": "pin",
+						"id": "pin",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_APPEARANCE_TITLE",
+						"info": "SETTINGS_APPEARANCE_HINT",
+						"id": "appearance",
+						"type": "Link"
+					},
+					{
+						"title": "SETTINGS_DEVICE_MANAGEMENT",
+						"info": "SETTINGS_DEVICE_MANAGEMENT_HINT",
+						"href": "device-management",
+						"id": "device-management",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "STARTUP_BEHAVIOR",
+						"info": "STARTUP_BEHAVIOR_HINT",
+						"href": "startupBehavior",
+						"id": "startupBehavior",
+						"type": "Link",
+						"target": "_blank"
+					},
+					{
+						"title": "SETTINGS_SCREEN_RECORDINGS_STORAGE_TITLE",
+						"info": "SETTINGS_SCREEN_RECORDINGS_STORAGE_HINT",
+						"id": "npvr",
+						"type": "Npvr",
+						"target": "_blank"
+					},
+					{
+						"title": "SCREEN_SETTINGS_ABOUT",
+						"id": "about",
+						"type": "Internal"
+					},
+					{
+						"title": "SCREEN_SETTINGS_LOGOUT",
+						"info": "SCREEN_SETTINGS_LOGOUT_HINT",
+						"id": "logout",
+						"tooltip": "logout_action_tooltip",
+						"type": "Action"
+					}
+				],
+				"main_menu": [
+					{
+						"title": "MODULE_MAIN_MENU_HOME",
+						"id": "HOME"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_LIVE_TV",
+						"id": "LIVE_TV"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_EPG",
+						"id": "EPG"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_VIDEO_STORE",
+						"id": "VIDEOSTORE"
+					},
+					{
+						"title": "MODULE_MAIN_MENU_MY_LIBRARY",
+						"id": "LIBRARY"
+					}
+				],
+				"app_config": {
+					"player_config": {
+						"hide_controls_after": 2.5,
+						"skip_back_interval": 10,
+						"skip_forward_interval": 30,
+						"binge_watching_threshold": 30,
+						"timeshift_duration": "",
+						"start_over_threshold": ""
+					},
+					"content_markers": {
+						"_DEFAULT": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NOW": {},
+						"CONTENT_MARKER_NOW_PLAYING": {
+							"color": "#FAFAFA",
+							"background": "#DA291C",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_LIVE": {
+							"color": "#FAFAFA",
+							"background": "#6295AC",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_NEXT": {
+							"color": "#121212",
+							"background": "#FAFAFA",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PAST": {},
+						"CONTENT_MARKER_RENTED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_RECORDED": {
+							"color": "#121212",
+							"background": "#F2F2F2",
+							"transparency": 1
+						},
+						"CONTENT_MARKER_PURCHASED": {},
+						"CONTENT_MARKER_NOT_SUBSCRIBED": {},
+						"CONTENT_MARKER_NEW": {},
+						"CONTENT_MARKER_FREE": {},
+						"CONTENT_MARKER_NEW_EPISODES": {}
+					},
+					"search_threshold": 3,
+					"player_settings": {
+						"skip_forward_interval": 60000,
+						"skip_back_interval": 30000,
+						"binge_watching_threshold": 30000,
+						"hide_controls_after": 5000,
+						"bookmark_threshold (sec)": null,
+						"bookmark_threshold": 95,
+						"startover_min_position_ms": 10000,
+						"bookmark_start_timeout": 180000,
+						"drm_protection": false,
+						"home_screen_player": {
+							"enabled": true,
+							"muted": false
+						},
+						"castlabs_settings": {
+							"pauseWhenInBackground": true,
+							"loop": false,
+							"enableHtmlCue": false,
+							"lowLatencyMode": false,
+							"suggestedPresentationDelay": 16,
+							"forceWaitForTracks": false,
+							"manifest": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"fuzzFactor": 0.5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"timeout": 10000
+								},
+								"availabilityWindowOverride": null,
+								"clockSyncUri": "",
+								"ignoreDrmInfo": false,
+								"xlinkFailGracefully": false,
+								"autoCorrectDrift": true
+							},
+							"abr": {
+								"enabled": true,
+								"defaultBandwidthEstimate": 2100000,
+								"switchInterval": 8,
+								"bandwidthUpgradeTarget": 0.85,
+								"bandwidthDowngradeTarget": 0.95,
+								"useSwitchIntervalForInitialSwitch": false,
+								"restrictions": {
+									"minWidth": 0,
+									"maxWidth": null,
+									"minHeight": 0,
+									"maxHeight": null,
+									"minPixels": 0,
+									"maxPixels": null,
+									"minBandwidth": 0,
+									"maxBandwidth": null
+								},
+								"initialRestrictions": {
+									"maxWidth": 1281,
+									"maxHeight": 721
+								}
+							},
+							"streaming": {
+								"attemptParameters": {
+									"maxAttempts": 5,
+									"baseDelay": 1000,
+									"backoffFactor": 2,
+									"fuzzFactor": 0.5,
+									"timeout": 10000
+								},
+								"bufferingGoal": 12,
+								"rebufferingGoal": 8,
+								"bufferBehind": 20,
+								"ignoreTextStreamFailures": false,
+								"alwaysStreamText": false,
+								"relativeTextTimestamp": false,
+								"startAtSegmentBoundary": true,
+								"gapDetectionThreshold": 0.1,
+								"smallGapLimit": 0.5,
+								"jumpLargeGaps": true,
+								"durationBackoff": 1,
+								"maxSegmentToMediaOffset": 1,
+								"forceNativeTS": false,
+								"preferNativeHlsOnSafari": true,
+								"safeSeekOffset": 5,
+								"stallEnabled": true,
+								"stallThreshold": 3,
+								"stallSkip": 0.5,
+								"bufferLimitUpdateInterval": 0.5,
+								"overridePasp": false,
+								"enableLiveEdgeChasing": false,
+								"chasingRate": 1.15,
+								"startChasingAt": 5,
+								"stopChasingAt": 2,
+								"chaseJumpDistance": 10,
+								"patchEdgeWhenMixedContent": false,
+								"ignoreDrift": false,
+								"disableFragmentSupport": true,
+								"disableMergedFragments": true
+							},
+							"restrictions": {
+								"minWidth": 0,
+								"maxWidth": null,
+								"minHeight": 0,
+								"maxHeight": null,
+								"minPixels": 0,
+								"maxPixels": null,
+								"minBandwidth": 0,
+								"maxBandwidth": null
+							},
+							"tizen": {
+								"sideStreamText": false
+							},
+							"htmlcue": {
+								"stretchSmpteImage": false,
+								"enableResizeObserver": false
+							},
+							"ttml": {},
+							"textstyle": {
+								"fontFamily": "'Roboto', sans-serif",
+								"fontColor": "white",
+								"backgroundColor": "rgba(0, 0, 0, 0.75)"
+							}
+						},
+						"live_catchup_playback_threshold": 60,
+						"channel_switch_player_timeout": 400,
+						"household_track_list": "[]"
+					},
+					"epg_settings": {
+						"past_visibility": 518400000,
+						"future_visibility": 518400000,
+						"prime_time_dst": "GMT+2",
+						"prime_time": 68400000
+					},
+					"search_settings": {
+						"key_threshold": 2,
+						"trigger_timeout": 500
+					},
+					"audio_subtitles": {
+						"default_audio_track": "eng",
+						"default_subtitle_track": "bul",
+						"poeditor_language_mapping": {
+							"bul": "SETTINGS_BG",
+							"eng": "SETTINGS_EN",
+							"deu": "SETTINGS_DE",
+							"fra": "SETTINGS_FR",
+							"ita": "SETTINGS_IT",
+							"rus": "SETTINGS_RU",
+							"spa": "SETTINGS_ES",
+							"por": "SETTINGS_PT",
+							"zho": "SETTINGS_ZH_TW",
+							"ron": "SETTINGS_RO",
+							"srp": "SETTINGS_SR",
+							"nld": "SETTINGS_NL",
+							"tur": "SETTINGS_TR",
+							"hrv": "SETTINGS_HR",
+							"slv": "SETTINGS_SL",
+							"slk": "SETTINGS_SK",
+							"hun": "SETTINGS_HU",
+							"ces": "SETTINGS_CS",
+							"bos": "SETTINGS_BS",
+							"pol": "SETTINGS_PL",
+							"ara": "SETTINGS_AR",
+							"sqi": "SETTINGS_SQ",
+							"ger": "SETTINGS_DE",
+							"hye": "SETTINGS_HY",
+							"bg": "SETTINGS_BG",
+							"en": "SETTINGS_EN",
+							"de": "SETTINGS_DE",
+							"fr": "SETTINGS_FR",
+							"it": "SETTINGS_IT",
+							"ru": "SETTINGS_RU",
+							"es": "SETTINGS_ES",
+							"pt": "SETTINGS_PT",
+							"zh": "SETTINGS_ZH_TW",
+							"ro": "SETTINGS_RO",
+							"sr": "SETTINGS_SR",
+							"nl": "SETTINGS_NL",
+							"tr": "SETTINGS_TR",
+							"hr": "SETTINGS_HR",
+							"sl": "SETTINGS_SL",
+							"sk": "SETTINGS_SK",
+							"hu": "SETTINGS_HU",
+							"cs": "SETTINGS_CS",
+							"bs": "SETTINGS_BS",
+							"pl": "SETTINGS_PL",
+							"ar": "SETTINGS_AR",
+							"sq": "SETTINGS_SQ",
+							"hy": "SETTINGS_HY",
+							"ola": "SETTINGS_ORIGINAL",
+							"mt": "SETTINGS_MULTILINGUAL",
+							"mlt": "SETTINGS_MULTILINGUAL"
+						},
+						"available_audio_languages": {
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"hu": "hun",
+							"pl": "pol",
+							"hy": "hye",
+							"sr": "srp",
+							"hr": "hrv",
+							"cs": "ces",
+							"es": "spa",
+							"sk": "slk",
+							"tr": "tur",
+							"mlt": "mlt"
+						},
+						"available_subtitles_languages": {
+							"off": "none",
+							"bg": "bul",
+							"en": "eng",
+							"de": "deu",
+							"fr": "fra",
+							"it": "ita",
+							"ru": "rus",
+							"es": "spa",
+							"pt": "por",
+							"zh": "zho",
+							"ro": "ron",
+							"sr": "srp",
+							"nl": "nld",
+							"tr": "tur"
+						}
+					},
+					"miscellanious": {
+						"reminder_timer": 30,
+						"max_items_collection": 5,
+						"resume_threshold": 100,
+						"imagesettings": {
+							"thumbnail": {
+								"xsHeight": 200,
+								"height": 280,
+								"xlHeight": 808,
+								"width": 0
+							},
+							"background": {
+								"portrait": 780,
+								"landscape": 1080,
+								"width": 1920
+							},
+							"logo": {
+								"largeHeight": 216,
+								"largeWidth": 384,
+								"mediumHeight": 112,
+								"mediumWidth": 41,
+								"smallHeight": 29,
+								"smallWidth": 75
+							}
+						},
+						"reset_pass_qr_code": "https://media.a1.bg/a1xploretvgo/qr.png",
+						"gdpr_accepted": 1629362425341,
+						"radio_fallback_image": "https://smarttv-config.a1xploretv.bg/radioFallbackImage.png",
+						"is_series_recording_allowed": false,
+						"show_catchup_icon": true,
+						"vod_upsell_allowed": {
+							"Samsung TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"LG TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Hisense TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"Philips TV": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							},
+							"PC": {
+								"rentIsAllowed": true,
+								"subscribeIsAllowed": true,
+								"purchaseIsAllowed": true
+							}
+						},
+						"show_legacy_gdpr": true,
+						"event_not_available_timer": 30
+					},
+					"pin_settings": {
+						"allowed_wrong_attempts": 3,
+						"wrong_attempts_lock_duration": 30000,
+						"pin_session_expiry": null
+					},
+					"fti": {
+						"screens": [
+							{
+								"id": "0",
+								"name": "welcomeScreen",
+								"enabled": false,
+								"isNewVariant": false
+							},
+							{
+								"id": "1",
+								"name": "login",
+								"enabled": false
+							},
+							{
+								"id": "2",
+								"name": "languageSelection",
+								"enabled": false
+							},
+							{
+								"id": "3",
+								"name": "pinCode",
+								"enabled": false
+							},
+							{
+								"id": "4",
+								"name": "ageRating",
+								"enabled": false
+							},
+							{
+								"id": "5",
+								"name": "privacyPolicy",
+								"enabled": false
+							},
+							{
+								"id": "6",
+								"name": "region",
+								"enabled": false
+							},
+							{
+								"id": "7",
+								"name": "viewControl",
+								"enabled": false
+							},
+							{
+								"id": "8",
+								"name": "deviceManagement",
+								"enabled": false
+							},
+							{
+								"id": "9",
+								"name": "closingScreen",
+								"enabled": false
+							}
+						]
+					},
+					"settings_items": {
+						"language_elements": [
+							{
+								"id": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"title": "SETTINGS_LANGUAGE_UI_LANGUAGE",
+								"info": "SETTINGS_LANGUAGE_UI_LANGUAGE_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_AUDIO_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_AUDIO_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_PRIMARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							},
+							{
+								"id": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"title": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY",
+								"info": "SETTINGS_LANGUAGE_SUBTITLE_SECONDARY_SUBHEADER",
+								"type": "Link",
+								"enabled": true
+							}
+						]
+					},
+					"uar": {
+						"logging_config": {
+							"endpoint": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/rest/events",
+							"batchBuffer": {
+								"timer": 60,
+								"maxSize": 100,
+								"maxRetries": 5
+							},
+							"retryBuffer": {
+								"timer": 300,
+								"maxSize": 100000,
+								"purgeSize": 0,
+								"requestSize": 500
+							},
+							"metrics": {
+								"timer": 900
+							}
+						}
+					},
+					"idp_auth": {
+						"settings": {
+							"activated": false,
+							"url": "https://tv.a1.bg/auth/realms/Xplore-TV/protocol/openid-connect",
+							"clientId": "xploretv",
+							"clientSecret": "CCrf4BraXewFinTpGiNzqzc2uGLf406r",
+							"clientScope": "openid",
+							"grantType": "urn:ietf:params:oauth:grant-type:device_code"
+						}
+					},
+					"languages": {
+						"en": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/en.json",
+							"image": "https://demo.3rdy.tv/cc-static-files/client-files/demo.3rdy.tv/ico-flag-united-states.png",
+							"default": true
+						},
+						"bg": {
+							"url": "https://smarttv-config.a1xploretv.bg/config/bg.json",
+							"image": "bg",
+							"default": false
+						}
+					}
+				},
+				"layout_config": {
+					"title": "A1",
+					"tv_background_dark_base_primary": "#121212",
+					"tv_background_dark_base_secondary": "#1c1c1e",
+					"tv_background_dark_base_tertiary": "#2c2c2e",
+					"tv_background_light_primary": "#fafafa",
+					"tv_background_light_secondary": "#f2f2f2",
+					"tv_background_light_tertiary": "#fafafa",
+					"tv_stripe_item_shadow_a1_gray_light_default": "#12121233",
+					"tv_stripe_item_shadow_a1_gray_light_selected": "#12121240",
+					"tv_stripe_item_shadow_a1_gray_dark_default": "#fafafa38",
+					"tv_stripe_item_shadow_a1_gray_dark_selected": "#da291c52",
+					"tv_button_background_a1_cool_blue_dark_selected": "#6c9fb1",
+					"tv_button_background_a1_cool_blue_light_selected": "#6295ac",
+					"tv_button_background_a1_hot_red_dark_selected": "#da3326",
+					"tv_button_background_a1_hot_red_light_selected": "#da291c",
+					"tv_button_background_a1_gray_dark_primary": "#12121299",
+					"tv_button_background_a1_gray_dark_secondary": "#3c3c3e99",
+					"tv_button_background_a1_gray_light_primary": "#fafafa99",
+					"tv_button_background_a1_gray_light_secondary": "#e5e5e599",
+					"tv_button_shadow_a1_gray_light_selected": "#12121233",
+					"tv_button_shadow_a1_gray_dark_selected": "#da291c38",
+					"tv_fill_colors_a1_gray_dark_primary": "#6363665c",
+					"tv_fill_colors_a1_gray_dark_secondary": "#63636652",
+					"tv_fill_colors_a1_gray_dark_tertiary": "#6363663d",
+					"tv_fill_colors_a1_gray_dark_quaternary": "#6363662e",
+					"tv_fill_colors_a1_gray_light_primary": "#70707033",
+					"tv_fill_colors_a1_gray_light_secondary": "#7070702e",
+					"tv_fill_colors_a1_gray_light_tertiary": "#7070701f",
+					"tv_fill_colors_a1_gray_light_quaternary": "#70707014",
+					"tv_indicator_light": "#6666665c",
+					"tv_indicator_dark": "#2c2c2ea6",
+					"tv_label_colors_a1_hot_red_dark_primary": "#da3326",
+					"tv_label_colors_a1_hot_red_light_primary": "#da291c",
+					"tv_label_colors_a1_cool_blue_dark_primary": "#6c9fb1",
+					"tv_label_colors_a1_cool_blue_light_primary": "#6295ac",
+					"tv_label_colors_a1_gray_dark_primary": "#fafafa",
+					"tv_label_colors_a1_gray_dark_secondary": "#f4f4f599",
+					"tv_label_colors_a1_gray_dark_tertiary": "#f4f4f54d",
+					"tv_label_colors_a1_gray_dark_quaternary": "#f4f4f52e",
+					"tv_label_colors_a1_gray_light_primary": "#121212",
+					"tv_label_colors_a1_gray_light_secondary": "#33333399",
+					"tv_label_colors_a1_gray_light_tertiary": "#3333334d",
+					"tv_label_colors_a1_gray_light_quaternary": "#3333332e",
+					"tv_overlay_background_a1_gray_dark_no_blur_supported": "#121212f0",
+					"tv_overlay_background_a1_gray_light_no_blur_supported": "#fafafaf0",
+					"tv_overlay_background_a1_gray_dark": "#121212cc",
+					"tv_overlay_background_a1_gray_light": "#fafafacc",
+					"tv_functional_dark_activeadblock": "#ffcc00",
+					"tv_functional_light_activeadblock": "#ffcc00",
+					"black_color": "#000000",
+					"white_color": "#FFFFFF"
+				},
+				"api_config": {
+					"routes": {
+						"Auth": {
+							"graphql": "https://stvweb.a1xploretv.bg:8443/sdsmiddleware/Mtel/graphql/4.0",
+							"Login": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Login",
+							"Logout": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/Logout",
+							"CheckToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CheckToken",
+							"CloneToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/CloneToken",
+							"GetToken": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/auth/GetToken",
+							"SessionHB": "https://stvweb.a1xploretv.bg:8843/ext_dev_facade/hhSvc/SessionHB"
+						},
+						"DRM": {
+							"license_server_playready": "https://prls.a1xploretv.bg/PlayReady/rightsmanager.asmx",
+							"license_server_widevine": "https://wvps.a1xploretv.bg:8063/"
+						}
+					}
+				},
+				"version_metadata": {
+					"version_title": "disable idp",
+					"version_number": 85,
+					"active": true,
+					"created_at": 1711468254606
+				}
+			}
+		}
+	}
+]

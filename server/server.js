@@ -13,7 +13,6 @@ const doc = require('./infrastructure/swagger-output.json');
 const { mongoUtils } = require('./infrastructure/mongoDBConnection');
 const { router } = require('./routes/apiRoutes.js');
 const Redis = require('ioredis');
-require('dotenv').config();
 require('./models');
 const API_PREFIX = '/api';
 const setupServer = async () => {
@@ -46,6 +45,7 @@ const setupServer = async () => {
     //TODO add here populating redis with the active configs
 
     app.use(function (req, res, next) {
+        req.redis = redisClient;
         next();
     });
 
@@ -68,7 +68,7 @@ const setupServer = async () => {
         app.use(
             webpackMiddleware(compiler, {
                 publicPath: webpackConfig.output.publicPath,
-                writeToDisk: false,
+                writeToDisk: true,
             }),
         );
         app.use(
@@ -79,9 +79,9 @@ const setupServer = async () => {
                 hot: true,
             }),
         );
-        app.use(express.static(path.join(__dirname, 'dev')));
+        app.use(express.static(path.join(__dirname, '../', 'dev')));
         app.get(/^\/(?!api\/).*/, function (req, res) {
-            res.sendFile(path.join(__dirname, 'dev', 'index.html'));
+            res.sendFile(path.join(__dirname, '../', 'dev', 'index.html'));
         });
     } else {
         app.use(express.static(path.join(__dirname, 'build')));
