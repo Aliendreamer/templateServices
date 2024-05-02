@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 // https://www.askasya.com/post/trackversions/
 const ConfigSchema = new Schema(
@@ -14,7 +14,7 @@ const ConfigSchema = new Schema(
         modifications: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'modification',
+                ref: "modification",
             },
         ],
     },
@@ -25,5 +25,5 @@ ConfigSchema.index({ version: 1 });
 ConfigSchema.index({ environment: 1 });
 ConfigSchema.index({ opco: 1 });
 ConfigSchema.index({ deviceType: 1 });
-ConfigSchema.set('toJSON', { getters: true, virtuals: false, versionKey: false });
-mongoose.model('config', ConfigSchema);
+ConfigSchema.set("toJSON", { getters: true, virtuals: false, versionKey: false });
+mongoose.model("config", ConfigSchema);

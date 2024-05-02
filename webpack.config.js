@@ -1,20 +1,20 @@
 /* eslint-disable no-unused-vars */
 /** @type {import('@types/webpack').Configuration} */
-const webpack = require('webpack');
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const rootPackageJson = require('./package.json');
-const isProduction = process.env.REACT_APP_ENVIRONMENT === 'production';
+const rootPackageJson = require("./package.json");
+const isProduction = process.env.REACT_APP_ENVIRONMENT === "production";
 module.exports = {
-    mode: isProduction ? 'production' : 'development',
+    mode: isProduction ? "production" : "development",
     entry: {
-        main: ['./client/index.js'],
+        main: ["./client/index.js"],
     },
     output: {
-        path: isProduction ? path.resolve('build') : path.resolve('dev'),
-        filename: 'bundle.js',
+        path: isProduction ? path.resolve("build") : path.resolve("dev"),
+        filename: "bundle.js",
     },
     externalsPresets: {
         web: true,
@@ -32,10 +32,10 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /(node_modules|server)/,
                 use: {
-                    loader: 'swc-loader',
+                    loader: "swc-loader",
                     options: {
                         module: {
-                            type: 'es6',
+                            type: "es6",
                             strict: false,
                             strictMode: false,
                             lazy: false,
@@ -44,7 +44,7 @@ module.exports = {
                         minify: !!isProduction,
                         jsc: {
                             parser: {
-                                syntax: 'ecmascript',
+                                syntax: "ecmascript",
                                 jsx: true,
                                 dynamicImport: true,
                                 privateMethod: false,
@@ -58,15 +58,15 @@ module.exports = {
                             },
                             transform: {
                                 react: {
-                                    pragma: 'React.createElement',
-                                    pragmaFrag: 'React.Fragment',
+                                    pragma: "React.createElement",
+                                    pragmaFrag: "React.Fragment",
                                     throwIfNamespace: true,
-                                    development: process.env.REACT_APP_ENVIRONMENT !== 'production',
+                                    development: process.env.REACT_APP_ENVIRONMENT !== "production",
                                     useBuiltins: false,
-                                    runtime: 'automatic',
+                                    runtime: "automatic",
                                 },
                             },
-                            target: 'es2022',
+                            target: "es2022",
                             loose: false,
                             externalHelpers: true,
                             // Requires v1.2.50 or upper and requires target to be es2016 or upper.
@@ -77,35 +77,35 @@ module.exports = {
             },
             {
                 test: /\.(sc|c)ss$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
             },
 
             {
                 test: /\.svg$/,
-                use: ['@svgr/webpack'],
+                use: ["@svgr/webpack"],
             },
             {
                 test: /\.(png|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
+                type: "asset/resource",
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                type: 'asset/resource',
+                type: "asset/resource",
             },
         ],
     },
     plugins: [
         !isProduction && new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            template: 'client/index.html',
-            favicon: 'client/favicon.ico',
+            template: "client/index.html",
+            favicon: "client/favicon.ico",
         }),
         new MiniCssExtractPlugin(),
         new webpack.ProvidePlugin({
-            process: 'process/browser',
+            process: "process/browser",
         }),
         new webpack.DefinePlugin({
-            'process.env': {
+            "process.env": {
                 NODE_ENV: JSON.stringify(process.env.REACT_APP_ENVIRONMENT),
                 REACT_APP_OIDC_CLIENT_ID: JSON.stringify(process.env.REACT_APP_OIDC_CLIENT_ID),
                 REACT_APP_KEYCLOAK_URL: JSON.stringify(process.env.REACT_APP_KEYCLOAK_URL),
@@ -119,12 +119,12 @@ module.exports = {
             },
         }),
     ].filter(Boolean),
-    devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
+    devtool: isProduction ? "source-map" : "cheap-module-source-map",
     performance: {
         hints: false,
     },
     resolve: {
-        extensions: ['.jsx', '.tsx', '.ts', '.graphql', '.gql', '.js', '.mjs', '.json', '.css'],
+        extensions: [".jsx", ".tsx", ".ts", ".graphql", ".gql", ".js", ".mjs", ".json", ".css"],
         fallback: {
             fs: false,
         },

@@ -1,18 +1,21 @@
-const mongoose = require('mongoose');
-const changesets = require('diff-json');
-const logger = require('../infrastructure/logger');
-const { REDIS_KEYS, REDIS_KEYS_SUFFIX, ENVIRONMENTS, OPCOS } = require('../infrastructure/constants');
+/* eslint-disable max-statements */
+/* eslint-disable react-func/max-lines-per-function */
+const mongoose = require("mongoose");
+const changesets = require("diff-json");
+const logger = require("../infrastructure/logger");
+const { REDIS_KEYS, REDIS_KEYS_SUFFIX, ENVIRONMENTS, OPCOS } = require("../infrastructure/constants");
 class ConfigService {
+    // eslint-disable-next-line space-before-function-paren
     constructor(redis) {
         this.redis = redis;
-        this.Config = mongoose.model('config');
-        this.Modification = mongoose.model('modification');
+        this.Config = mongoose.model("config");
+        this.Modification = mongoose.model("modification");
     }
 
-    returnConfig = async (id) => await this.Config.findById(id).populate('modifications').exec();
+    returnConfig = async (id) => await this.Config.findById(id).populate("modifications").exec();
 
     returnConfigs = async (opco, env, deviceType) =>
-        await this.Config.find({ opco, environment: env, deviceType }).populate('modifications').exec();
+        await this.Config.find({ opco, environment: env, deviceType }).populate("modifications").exec();
 
     returnActiveConfig = async (opco, deviceType, env) => {
         const key = REDIS_KEYS[`${opco.toUpperCase()}_${deviceType.toUpperCase()}_${env.toUpperCase()}_${REDIS_KEYS_SUFFIX}`];
@@ -47,7 +50,7 @@ class ConfigService {
         emptyConfig.version = largestVersion.version + 1;
         emptyConfig.author = user.name;
         emptyConfig.active = false;
-        emptyConfig.title = 'Generic empty Config';
+        emptyConfig.title = "Generic empty Config";
         emptyConfig.config = {};
         emptyConfig.deviceType = deviceType;
         emptyConfig.environment = env;
@@ -70,7 +73,7 @@ class ConfigService {
         delete clonedConfig._id;
         clonedConfig.version = largestVersion.version + 1;
         clonedConfig.author = user.name;
-        clonedConfig.title = 'Generic created by example Config';
+        clonedConfig.title = "Generic created by example Config";
         clonedConfig.active = false;
         clonedConfig.opco = opco.toUpperCase();
         clonedConfig.date = new Date().toISOString();
@@ -90,7 +93,7 @@ class ConfigService {
         const clonedItem = configToCopy.toObject();
         delete clonedItem._id;
         clonedItem.author = user.name;
-        clonedConfig.title = 'Generic copied Config';
+        clonedConfig.title = "Generic copied Config";
         clonedItem.active = false;
         clonedItem.opco = opco.toUpperCase();
         clonedItem.date = new Date().toISOString();
@@ -102,7 +105,7 @@ class ConfigService {
     deleteConfig = async (id) => {
         const config = await this.Config.findById(id).exec();
         if (config.active) {
-            throw new Error('409');
+            throw new Error("409");
         }
         await this.Config.findByIdAndDelete(id).exec();
         return true;
@@ -126,7 +129,9 @@ class ConfigService {
         configReplace.modifications.push(modification._id);
         await this.Config.findOneAndReplace({ _id: id }, configReplace).exec();
 
-        if (!configuration.active) return true;
+        if (!configuration.active) {
+            return true;
+        }
         const key =
             REDIS_KEYS[
                 `${updatedConfig.opco.toUpperCase()}_${updatedConfig.deviceType.toUpperCase()}_${updatedConfig.environment.toUpperCase()}_${REDIS_KEYS_SUFFIX}`
@@ -160,7 +165,9 @@ class ConfigService {
             const configReplace = envConfig.toObject();
             const newConfig = configReplace.config;
             for (const difference of diff) {
-                if (!difference.hasOwnProperty('changes')) break;
+                if (!Object.prototype.hasOwnProperty.call(difference, "changes")) {
+                    break;
+                }
                 // this is content_config  always
                 const outsideKey = difference.key;
                 for (const nestedDiff of difference.changes) {
@@ -175,18 +182,18 @@ class ConfigService {
                             // added changed or removed where the actual change is.
                             // for example miscellanious or pin_settings ect.
                             const innerNestedDiffKey = nestedChanges.key;
-                            if (!nestedChanges.hasOwnProperty('changes')) {
+                            if (!Object.prototype.hasOwnProperty.call(nestedChanges, "changes")) {
                                 // something went wrong and there is no actual changes
                                 continue;
                             }
                             for (const positionOfChange of nestedChanges.changes) {
                                 // the actual changes done
                                 const positionKey = positionOfChange.key;
-                                if (!nestedChanges.hasOwnProperty('changes')) {
-                                    // something went wrong and there is no actual changes
+                                if (!nestedChanges.Object.prototype.hasOwnProperty.call(nestedChanges, "changes")) {
+                                    // something went wrongCh and there is no actual changes
                                     continue;
                                 }
-                                if (nestedChanges.hasOwnProperty('embededKey')) {
+                                if (Object.prototype.hasOwnProperty.call(nestedChanges, "embededKey")) {
                                     // we know that the change is in some array, but the library
                                     // list the changes separately for example deleting a settings item will create
                                     // 11 changes as the array will be different.
@@ -196,16 +203,17 @@ class ConfigService {
                                     continue;
                                 }
                                 switch (positionOfChange.type) {
-                                    case 'add':
-                                    case 'update':
+                                    case "add":
+                                    case "update":
                                         logger.info(
                                             `Setting ${newConfig[outsideKey][nestedKey][innerNestedDiffKey][positionKey]} to ${positionOfChange.value}`,
                                         );
                                         newConfig[outsideKey][nestedKey][innerNestedDiffKey][positionKey] = positionOfChange.value;
                                         break;
-                                    case 'remove':
+                                    case "remove":
                                         logger.info(`Deleting ${newConfig[outsideKey][nestedKey][innerNestedDiffKey][positionKey]}`);
                                         delete newConfig[outsideKey][nestedKey][innerNestedDiffKey][positionKey];
+                                        break;
                                     default:
                                         break;
                                 }

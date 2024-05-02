@@ -5,5 +5,9 @@
 		"**/*.sass",
 		"**/*.less",
 		"node_modules/@mantine/core/styles.css"
-	]
+	],
+	"editor.detectIndentation": false,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.indentSize": "tabSize"
 }

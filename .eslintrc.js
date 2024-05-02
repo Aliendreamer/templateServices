@@ -5,7 +5,6 @@ module.exports = {
 		"plugin:react-hooks/recommended",
 		"eslint:recommended",
 		"prettier",
-		// "plugin:node/recommended",
 		"plugin:react/recommended"
 	],
 	parserOptions: {
@@ -33,14 +32,6 @@ module.exports = {
 	plugins: ["react", "promise", "react-func", "only-ascii", "prettier"],
 	ignorePatterns: ["**/schema.*"],
 	rules: {
-		indent: [
-			"error",
-			"tab",
-			{
-				MemberExpression: 1,
-				SwitchCase: 1
-			}
-		],
 		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
 		semi: ["error", "always"],
 		quotes: ["error", "double"],
@@ -50,9 +41,9 @@ module.exports = {
 		"space-before-function-paren": [
 			"error",
 			{
-				anonymous: "never",
-				named: "never",
-				asyncArrow: "never"
+				anonymous: "always",
+				named: "always",
+				asyncArrow: "always"
 			}
 		],
 		"object-curly-spacing": [2, "always"],
@@ -131,20 +122,12 @@ module.exports = {
 		"semi-spacing": "error",
 		"padded-blocks": "error",
 		"rest-spread-spacing": "error",
-		"comma-dangle": "error",
 		"template-curly-spacing": "error",
 		"no-sequences": "error",
 		"import/no-duplicates": "error",
 		"no-multiple-empty-lines": "error",
 		"operator-linebreak": "error",
 		"jsx-quotes": "off",
-		"react/jsx-indent": [
-			4,
-			"tab",
-			{
-				indentLogicalExpressions: false
-			}
-		],
 		"react/jsx-indent-props": "off",
 		"react/display-name": "off",
 		"react/jsx-no-bind": "off",
@@ -165,6 +148,6 @@ module.exports = {
 		"template-tag-spacing": "error",
 		"prefer-template": "error",
 		"only-ascii/only-ascii": 2,
-		"id-length": "error"
+		"id-length": "off"
 	}
 };

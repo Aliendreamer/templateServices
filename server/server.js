@@ -42,7 +42,7 @@ const setupServer = async () => {
 
     await mongoUtils.connectMongoDbWithRetry();
 
-    //TODO add here populating redis with the active configs
+    // TODO add here populating redis with the active configs
 
     app.use(function (req, res, next) {
         req.redis = redisClient;
