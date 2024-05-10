@@ -6,6 +6,7 @@ import { Outlet } from "react-router";
 import { keycloak } from "..";
 import useCreateNavLinks from "../utils/useCreateNavlinks";
 import Header from "./Header";
+import NavBreadcrumbs from "./Breadcrumbs";
 import classes from "../cssModules/navbar.module.css";
 
 export const Layout = () => {
@@ -15,14 +16,14 @@ export const Layout = () => {
 		transitionDuration={500}
 		transitionTimingFunction="ease"
 		header={{ height: 60 }}
-		navbar={{ width: 250 }}
+		navbar={{ width: 300 }}
 		padding="md"
 	>
 		<AppShell.Header>
 			<Header/>
 		</AppShell.Header>
 		<AppShell.Navbar p="md">
-		<ScrollArea w={250} scrollbars="y" className={classes.navbar}>
+		<ScrollArea w={270} scrollbars="y" className={classes.navbar}>
 			<Stack>
 				<nav className={classes.navbarMain}>
 						{links}
@@ -33,7 +34,10 @@ export const Layout = () => {
 						<Center>
 							<Button
 								leftSection={<IconLogout className={classes.linkIcon} stroke={1.5} />}
-								onClick={() => keycloak.logout()}
+								onClick={(e) => {
+									e.preventDefault();
+									keycloak.logout();
+								}}
 								variant='default'
 							>
 								Logout
@@ -42,6 +46,7 @@ export const Layout = () => {
 					</div>
 		</AppShell.Navbar>
 		<AppShell.Main>
+			<NavBreadcrumbs />
 			<Outlet />
 		</AppShell.Main>
 	</AppShell>

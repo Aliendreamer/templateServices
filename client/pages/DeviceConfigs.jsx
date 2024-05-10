@@ -1,42 +1,51 @@
 import React, { useEffect } from "react";
 import { Container, NavLink, SimpleGrid } from "@mantine/core";
-import { OPCOS, OPCOS_LABELS } from "../utils/constants";
-import classes from "../cssModules/envconfigs.module.css";
+import { ENVIRONMENTS } from "../utils/constants";
 import { useNavigate } from "react-router";
 import useStateStore from "../utils/useStateStore";
+import classes from "../cssModules/envconfigs.module.css";
 import useQueryString from "../utils/useQueryString";
 
-const OpcoConfigsPage = () => {
+const DeviceConfigsPage = () => {
 	const navigate = useNavigate();
-	const { device } = useQueryString();
+	const { device, opco } = useQueryString();
 
 	const setDeviceType = useStateStore((state) => state.setDeviceType);
 	const setOpco = useStateStore((state) => state.setOpco);
 	const deviceType = useStateStore((state) => state.deviceType);
+	const currentOpco = useStateStore((state) => state.opco);
+	const setEnvironment = useStateStore((state) => state.setEnvironment);
+	const setSelectedUrl = useStateStore((state) => state.setSelectedUrl);
+
 	useEffect(() => {
 		if (!deviceType) {
 			setDeviceType(device);
 		}
-	}, [device, deviceType, setDeviceType]);
+		if (!currentOpco) {
+			setOpco(opco);
+		}
+	}, [device, deviceType, opco, currentOpco, setOpco, setDeviceType]);
 	return (
 		<Container className={classes.wrapper}>
 		<SimpleGrid
 			mt={60}
 			cols={2}
 			spacing={"lg"}
-			verticalSpacing={"xs"}
+			verticalSpacing={"lg"}
 		>
-			{Object.values(OPCOS).map((opco) => (
+			{Object.values(ENVIRONMENTS).map((env) => (
 				<NavLink
-					key={opco}
-					label={OPCOS_LABELS[opco]}
+					key={env}
+					label={env}
 					styles={{ root: { width: "320px", height: "120px", padding: "10px" }, label: { margin: "35%", fontSize: "18px", fontWeight: "bold" } }}
-					active
 					variant="filled"
+					active
 					onClick={(e) => {
 						e.preventDefault();
-						setOpco(opco);
-						navigate(`/device?device=${device}&opco=${opco}`);
+						const url = `/configs?device=${device}&opco=${opco}&env=${env}`;
+						setEnvironment(env);
+						setSelectedUrl(url);
+						navigate(url);
 					}}
 				/>
 			))}
@@ -45,4 +54,4 @@ const OpcoConfigsPage = () => {
 	);
 };
 
-export default OpcoConfigsPage;
+export default DeviceConfigsPage;

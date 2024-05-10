@@ -7,6 +7,7 @@ const ConfigSchema = new Schema(
         author: String,
         date: String,
         opco: String,
+        title: String,
         version: Number,
         deviceType: String,
         environment: String,

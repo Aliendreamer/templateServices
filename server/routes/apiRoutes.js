@@ -10,7 +10,8 @@ router.get("/configs", async (req, res) => {
     // #swagger.deprecated = false
     // #swagger.produces = ['application/json']
     // #swagger.summary = 'Retrieve the list of configurations for a specific opco, environment, and device type'
-    // #swagger.description = 'Returns full list of configurations for a specific opco, environment, and device type. For example, will return all configurations for opco "A1BG", environment "development", and device type "smarttv".'
+    // #swagger.description = 'Returns full list of configurations for a specific opco, environment, and device type.
+    // For example, will return all configurations for opco "A1BG", environment "development", and device type "smarttv".'
     // #swagger.parameters['opco'] = { description: 'The opco to filter configurations by' }
     // #swagger.parameters['env'] = { description: 'The environment to filter configurations by' }
     // #swagger.parameters['devicetype'] = { description: 'The devicetype to filter configurations by' }
@@ -580,7 +581,8 @@ router.get("/add/property", async (req, res) => {
     // #swagger.parameters['devicetype'] = { description: 'The devicetype to filter configurations by' }
     // #swagger.parameters['updateProduction'] = { description: 'Boolean value if the production env should be updated first' }
     // #swagger.parameters['config'] = { in:'body',required:true, description: 'the new updated json configuration object',schema:{ $ref: "#/components/schemas/Config"}}
-    // #swagger.description = 'The current active configuration for the request parameters,For example, will return the configuration for opco "A1BG", environment "development", and device type "smarttv" with id "xxx".'
+    // #swagger.description = 'The current active configuration for the request parameters,
+    // For example, will return the configuration for opco "A1BG", environment "development", and device type "smarttv" with id "xxx".'
     /* #swagger.security = [{
             "bearerAuth": []
     }] */

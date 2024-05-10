@@ -15,7 +15,7 @@ class ConfigService {
     returnConfig = async (id) => await this.Config.findById(id).populate("modifications").exec();
 
     returnConfigs = async (opco, env, deviceType) =>
-        await this.Config.find({ opco, environment: env, deviceType }).populate("modifications").exec();
+        await this.Config.find({ opco: opco.toUpperCase(), environment: env, deviceType }).populate("modifications").exec();
 
     returnActiveConfig = async (opco, deviceType, env) => {
         const key = REDIS_KEYS[`${opco.toUpperCase()}_${deviceType.toUpperCase()}_${env.toUpperCase()}_${REDIS_KEYS_SUFFIX}`];

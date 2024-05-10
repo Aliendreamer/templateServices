@@ -33,3 +33,12 @@ export const THEMES = {
     DARK: "dark",
     LIGHT: "light",
 };
+
+export const OPCOS_LABELS = {
+    a1bg: "Bulgaria",
+    a1at: "Austria",
+    a1hr: "Croatia",
+    a1mk: "Macedonia",
+    a1sl: "Slovenia",
+    a1rs: "Serbia",
+};

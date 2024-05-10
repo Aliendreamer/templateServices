@@ -27,7 +27,7 @@
           "Config"
         ],
         "summary": "Retrieve the list of configurations for a specific opco, environment, and device type",
-        "description": "Returns full list of configurations for a specific opco, environment, and device type. For example, will return all configurations for opco \"A1BG\", environment \"development\", and device type \"smarttv\".",
+        "description": "Returns full list of configurations for a specific opco, environment, and device type.  //",
         "parameters": [
           {
             "name": "authorization",
@@ -84,6 +84,9 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Request can't be fullfilled due to unexpected server error",
@@ -858,7 +861,7 @@
           "Config"
         ],
         "summary": "Retrieve the a single unique configuration active for a specific opco, environment, and device type",
-        "description": "The current active configuration for the request parameters,For example, will return the configuration for opco \"A1BG\", environment \"development\", and device type \"smarttv\" with id \"xxx\".",
+        "description": "The current active configuration for the request parameters,",
         "parameters": [
           {
             "name": "authorization",
@@ -874,6 +877,23 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "updateProduction",
+            "description": "Boolean value if the production env should be updated first",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "config",
+            "in": "body",
+            "required": true,
+            "description": "the new updated json configuration object",
+            "schema": {
+              "$ref": "#/components/schemas/Config"
+            }
           }
         ],
         "responses": {
@@ -887,45 +907,8 @@
               }
             }
           },
-          "400": {
-            "description": "Request can't be fullfilled due to missing information or invalid parameters",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/badResponse"
-                }
-              }
-            }
-          },
           "401": {
-            "description": "Request can't be fullfilled due to unathorized access",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/unauthorized"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Request can't be fullfilled due to keyloak public key error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/keycloak"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Request can't be fullfilled due to unexpected server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/badResponse"
-                }
-              }
-            }
+            "description": "Unauthorized"
           }
         },
         "security": [
@@ -938,6 +921,12 @@
     }
   },
   "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    },
     "schemas": {
       "opco": {
         "type": "string",
@@ -1011,7 +1000,7 @@
           },
           "date": {
             "type": "string",
-            "example": "2024-04-16T08:37:15.025Z"
+            "example": "2024-05-09T07:14:11.228Z"
           },
           "opco": {
             "type": "string",
@@ -1081,7 +1070,7 @@
           "deviceType": "smarttv",
           "environment": "development",
           "active": true,
-          "date": "2024-04-16T08:37:15.025Z",
+          "date": "2024-05-09T07:14:11.228Z",
           "content": {
             "api_config": {
               "routes": {

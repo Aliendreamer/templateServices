@@ -6,6 +6,9 @@ refresh cache with the active configurations on application restart
 add possibility to have new keys on all environments of device type automatically adding it once adds it every where, but only per
 device type / probably with 2 roles editor and developer and only a developer will be able to do this
 find how to keep diff as property to be checked at one point as history between versions. in same version maybe keep only the last change?
+make side navigation to scroll to item if not visible currrently for example if it is rs android production it is not in the visible range
+side menu should scroll to the item.
+
 integrate poe editor api / keep in mind the load they can handle /
 - update keys
 -download keys and values

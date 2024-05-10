@@ -3,14 +3,16 @@ import { createRoot } from "react-dom/client";
 import "./style/init.css";
 import "@mantine/dates/styles.css";
 import "@mantine/core/styles.css";
+import "@mantine/notifications/styles.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MantineProvider } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
 import { ModalsProvider } from "@mantine/modals";
 import Home from "./pages/Home";
 import ErrorPage from "./pages/Errorpage";
-import EnvConfigsPage from "./pages/EnvConfigs";
+import DeviceConfigsPage from "./pages/DeviceConfigs";
 import OpcoConfigsPage from "./pages/OpcoConfigs";
+import OpcoSettingsPage from "./pages/OpcoSettings";
 import Keycloak from "keycloak-js";
 import { Layout } from "./components/Layout";
 import { KEYCLOAK_CONSTANTS } from "./utils/constants";
@@ -23,9 +25,25 @@ const router = createBrowserRouter([
         children: [
             { path: "/", element: <Home /> },
             { path: "*", element: <Home /> },
-            { path: "/device/configs", element: <EnvConfigsPage /> },
-            { path: "/opco", element: <OpcoConfigsPage /> },
         ],
+    },
+    {
+        element: <Layout />,
+        hasErrorBoundary: true,
+        errorElement: <ErrorPage />,
+        children: [{ path: "/opco", element: <OpcoConfigsPage /> }],
+    },
+    {
+        element: <Layout />,
+        hasErrorBoundary: true,
+        errorElement: <ErrorPage />,
+        children: [{ path: "/device", element: <DeviceConfigsPage /> }],
+    },
+    {
+        element: <Layout />,
+        hasErrorBoundary: true,
+        errorElement: <ErrorPage />,
+        children: [{ path: "/configs", element: <OpcoSettingsPage /> }],
     },
 ]);
 const keyCloakConfig = {

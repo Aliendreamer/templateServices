@@ -16,7 +16,7 @@ export const createConfigSlice = (set, get) => ({
     environment: "",
     configs: [],
     selectedConfigId: null,
-    setSelectedUrl: (urlLabel) => set(() => ({ activeUrl: urlLabel })),
+    setSelectedUrl: (url) => set(() => ({ activeUrl: url })),
     setOpco: (opco) => set(() => ({ opco })),
     setDeviceType: (deviceType) => set(() => ({ deviceType })),
     setEnvironment: (environment) => set(() => ({ environment })),
@@ -32,3 +32,12 @@ export const createConfigSlice = (set, get) => ({
             );
         }),
 });
+
+export const isJson = (str) => {
+    try {
+        JSON.parse(str);
+        return true;
+    } catch (err) {
+        return false;
+    }
+};

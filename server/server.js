@@ -1,20 +1,20 @@
-const express = require('express');
-const cors = require('cors');
-const cookieParser = require('cookie-parser');
-const path = require('path');
-const rateLimit = require('express-rate-limit');
-const helmet = require('helmet');
-const compression = require('compression');
-const bodyParser = require('body-parser');
-const logger = require('./infrastructure/logger');
-const pinoHTTP = require('pino-http');
-const swaggerUI = require('swagger-ui-express');
-const doc = require('./infrastructure/swagger-output.json');
-const { mongoUtils } = require('./infrastructure/mongoDBConnection');
-const { router } = require('./routes/apiRoutes.js');
-const Redis = require('ioredis');
-require('./models');
-const API_PREFIX = '/api';
+const express = require("express");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
+const path = require("path");
+const rateLimit = require("express-rate-limit");
+const helmet = require("helmet");
+const compression = require("compression");
+const bodyParser = require("body-parser");
+const logger = require("./infrastructure/logger");
+const pinoHTTP = require("pino-http");
+const swaggerUI = require("swagger-ui-express");
+const doc = require("./infrastructure/swagger-output.json");
+const { mongoUtils } = require("./infrastructure/mongoDBConnection");
+const { router } = require("./routes/apiRoutes.js");
+const Redis = require("ioredis");
+require("./models");
+const API_PREFIX = "/api";
 const setupServer = async () => {
     const app = express();
     app.use(
@@ -23,13 +23,13 @@ const setupServer = async () => {
         }),
     );
     app.use(cookieParser());
-    app.use('/swagger', swaggerUI.serve, swaggerUI.setup(doc, { explorer: true }));
+    app.use("/swagger", swaggerUI.serve, swaggerUI.setup(doc, { explorer: true }));
     app.use(helmet.ieNoOpen());
     app.use(helmet.xssFilter());
     app.use(helmet.hidePoweredBy());
     app.use(compression());
-    app.use(express.json({ limit: '50mb', extended: true }));
-    app.use(express.urlencoded({ limit: '50mb', extended: true }));
+    app.use(express.json({ limit: "50mb", extended: true }));
+    app.use(express.urlencoded({ limit: "50mb", extended: true }));
     app.use(cors());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
@@ -56,14 +56,14 @@ const setupServer = async () => {
         legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
     });
 
-    app.get('*/hc', apiLimiter, (req, res) => {
-        res.send(JSON.stringify({}, null, '\t'));
+    app.get("*/hc", apiLimiter, (req, res) => {
+        res.send(JSON.stringify({}, null, "\t"));
     });
 
-    if (process.env.REACT_APP_ENVIRONMENT !== 'production') {
-        const webpackMiddleware = require('webpack-dev-middleware');
-        const webpack = require('webpack');
-        const webpackConfig = require('../webpack.config.js');
+    if (process.env.REACT_APP_ENVIRONMENT !== "production") {
+        const webpackMiddleware = require("webpack-dev-middleware");
+        const webpack = require("webpack");
+        const webpackConfig = require("../webpack.config.js");
         const compiler = webpack(webpackConfig);
         app.use(
             webpackMiddleware(compiler, {
@@ -72,21 +72,21 @@ const setupServer = async () => {
             }),
         );
         app.use(
-            require('webpack-hot-middleware')(compiler, {
+            require("webpack-hot-middleware")(compiler, {
                 log: false,
-                path: '/__webpack_hmr',
+                path: "/__webpack_hmr",
                 heartbeat: 5 * 1000,
                 hot: true,
             }),
         );
-        app.use(express.static(path.join(__dirname, '../', 'dev')));
+        app.use(express.static(path.join(__dirname, "../", "dev")));
         app.get(/^\/(?!api\/).*/, function (req, res) {
-            res.sendFile(path.join(__dirname, '../', 'dev', 'index.html'));
+            res.sendFile(path.join(__dirname, "../", "dev", "index.html"));
         });
     } else {
-        app.use(express.static(path.join(__dirname, 'build')));
+        app.use(express.static(path.join(__dirname, "build")));
         app.get(/^\/(?!api\/).*/, function (req, res) {
-            res.sendFile(path.join(__dirname, 'build', 'index.html'));
+            res.sendFile(path.join(__dirname, "build", "index.html"));
         });
     }
     app.use(`${API_PREFIX}`, router);
